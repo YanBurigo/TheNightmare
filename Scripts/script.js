@@ -13,6 +13,8 @@ document.body.appendChild(canvas);
 
 camera.position.z = 5;
 camera.position.y = 0.1;
+camera.position.y=80;
+camera.rotation.x = -1.5
 
 var controles = new THREE.OrbitControls(camera, render.domElement);
 
