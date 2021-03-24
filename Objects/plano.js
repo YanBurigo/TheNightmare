@@ -15,7 +15,7 @@ function gerarSuperficiePlana(lar = 1, alt = 1, p = 1){
 
 //Adicionando plano
 var forma = new THREE.Mesh(
-    gerarSuperficiePlana(100,100,5),
+    gerarSuperficiePlana(115,115,5),
     new THREE.LineBasicMaterial({color: 0x333333})
 );
 //forma.material.wireframe = true;
