@@ -19,5 +19,13 @@ var forma = new THREE.Mesh(
     new THREE.LineBasicMaterial({color: 0x333333})
 );
 //forma.material.wireframe = true;
-forma.material.side = THREE.DoubleSide;
+//forma.material.side = THREE.DoubleSide;
+
+var planTexture = new THREE.TextureLoader().load("Assets/texturaChao.png");
+var materialChao = new THREE.MeshBasicMaterial({color: 0x333333, map: planTexture });
+
+var geometriaChao = new THREE.BoxGeometry(115,0.1,115);
+var chao = new THREE.Mesh(geometriaChao, materialChao);
+cena.add(chao);
+
 cena.add(forma);
