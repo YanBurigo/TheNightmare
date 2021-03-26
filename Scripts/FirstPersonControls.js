@@ -64,7 +64,3 @@ document.onmousemove = function (evt){
         camera.rotation.y -= (evt.movementX/150);
     }
 }
-
-
-
-
