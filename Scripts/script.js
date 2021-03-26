@@ -16,45 +16,42 @@ camera.position.y = 2;
 camera.position.x = -55;
 
 //Debug Collision
-var cubeGeometry = new THREE.BoxGeometry(2,2,2,1,1,1);
+var cubeGeometry = new THREE.BoxGeometry(1,1,1,1,1,1);
 var wireMaterial = new THREE.MeshBasicMaterial( { color: 0x00ff00, wireframe:true } )
 var PlayerHitbox = new THREE.Mesh( cubeGeometry, wireMaterial );
 PlayerHitbox.position.set(-55,2,60)
 cena.add(PlayerHitbox)
 
-var hitbox2 = new THREE.Mesh(new THREE.BoxGeometry(1.2,2,1), new THREE.MeshLambertMaterial({color: 0xff4000}));
-hitbox2.position.y = 2;
-hitbox2.position.x = -55;
-hitbox2.position.z = 50;
-cena.add(hitbox2);
+var debugHitbox = new THREE.Mesh(new THREE.BoxGeometry(1.2,2,1), new THREE.MeshLambertMaterial({color: 0xff4000}));
+debugHitbox.position.y = 2;
+debugHitbox.position.x = -55;
+debugHitbox.position.z = 50;
+cena.add(debugHitbox);
 
 function desenhar(){
     render.render(cena, camera);
     requestAnimationFrame(desenhar);
 
     PlayerHitbox.position.set(camera.position.x, camera.position.y, camera.position.z);
-    if(checkCollision()){
+    if(checkCollision(PlayerHitbox, debugHitbox)){
         console.log("Colisão");
     }
-    //console.log(Player.position.x +","+Player.position.y+","+Player.position.z);
 }
 requestAnimationFrame(desenhar);
 
-function checkCollision(){
-    var originPoint = PlayerHitbox.position.clone();
+function checkCollision(mesh1, mesh2){
+    var m1Xposition = mesh1.position.x;
+    var m1ZPosition = mesh1.position.z;
+    var m1Width = mesh1.geometry.parameters.width;
+    var m1Depth = mesh1.geometry.parameters.depth;
 
-    for (var vertexIndex = 0; vertexIndex < PlayerHitbox.geometry.vertices.length; vertexIndex++)
-    {       
-        var localVertex = PlayerHitbox.geometry.vertices[vertexIndex].clone();
-        var globalVertex = PlayerHitbox.matrix.multiplyVector3(localVertex);
-        var directionVector = globalVertex.subSelf( PlayerHitbox.position );
-
-        var ray = new THREE.Ray( PlayerHitbox.position, directionVector.clone().normalize() );
-        var collisionResults = ray.intersectObjects( collidableMeshList );
-        if ( collisionResults.length > 0 && collisionResults[0].distance < directionVector.length() ) 
-        {
-            return true;
-        }
-    }
-    return false;
+    var m2Xposition = mesh2.position.x;
+    var m2ZPosition = mesh2.position.z;
+    var m2Width = mesh2.geometry.parameters.width;
+    var m2Depth = mesh2.geometry.parameters.depth;
+    
+    return !(m1Xposition > m2Xposition + m2Width 
+        || m1Xposition + m1Width < m2Xposition 
+        || m1ZPosition > m2ZPosition + m2Depth 
+        || m1ZPosition + m1Depth < m2ZPosition);
 }
