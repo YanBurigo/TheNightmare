@@ -11,13 +11,19 @@ render.setSize(window.innerWidth, window.innerHeight);
 var canvas = render.domElement;
 document.body.appendChild(canvas);
 
+var debugMode = true;       //Variavel de debug responsavel por mostrar elementos invisiveis (ex: hitboxes) caso for true
+
 camera.position.z = 60;
 camera.position.y = 2;
 camera.position.x = -55;
 
-
 function desenhar(){
     render.render(cena, camera);
     requestAnimationFrame(desenhar);
+
+    PlayerHitbox.position.set(camera.position.x, camera.position.y, camera.position.z);     //necessário para sincronizar a hitbox do Player com a camera
+    if(checkCollision(PlayerHitbox, MonsterHitbox)){
+        console.log("Colisão");
+    }
 }
 requestAnimationFrame(desenhar);
