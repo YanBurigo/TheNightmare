@@ -11,11 +11,12 @@ render.setSize(window.innerWidth, window.innerHeight);
 var canvas = render.domElement;
 document.body.appendChild(canvas);
 
-var debugMode = true;       //Variavel de debug responsavel por mostrar elementos invisiveis (ex: hitboxes) caso for true
+var debugMode = false;       //Variavel de debug responsavel por mostrar elementos invisiveis (ex: hitboxes) caso for true
 
 camera.position.z = 60;
 camera.position.y = 2;
 camera.position.x = -55;
+
 
 function desenhar(){
     render.render(cena, camera);
@@ -27,3 +28,9 @@ function desenhar(){
     }
 }
 requestAnimationFrame(desenhar);
+
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
