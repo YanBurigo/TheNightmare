@@ -11,7 +11,7 @@ render.setSize(window.innerWidth, window.innerHeight);
 var canvas = render.domElement;
 document.body.appendChild(canvas);
 
-var debugMode = true;       //Variavel de debug responsavel por mostrar elementos invisiveis (ex: hitboxes) caso for true
+var debugMode = false;       //Variavel de debug responsavel por mostrar elementos invisiveis (ex: hitboxes) caso for true
 
 camera.position.z = 60;
 camera.position.y = 2;
