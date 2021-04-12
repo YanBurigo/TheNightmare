@@ -17,6 +17,7 @@ camera.position.z = 60;
 camera.position.y = 2;
 camera.position.x = -55;
 
+
 function desenhar(){
     render.render(cena, camera);
     requestAnimationFrame(desenhar);
@@ -27,3 +28,9 @@ function desenhar(){
     }
 }
 requestAnimationFrame(desenhar);
+
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
+  }

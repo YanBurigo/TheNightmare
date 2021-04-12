@@ -14,7 +14,6 @@ var intervalo = setInterval(() => {
         if (posX[i] > camera.position.x-1 && posX[i] < camera.position.x+1 && posZ[i]+(tam[i]/2) > camera.position.z-1 && posZ[i]-(tam[i]/2) < camera.position.z+1) {
             precolisao = true
             colisao = i;
-            console.log("col1")
         }
         else{
             if(i==0)
@@ -28,7 +27,6 @@ var intervalo = setInterval(() => {
         if (posZ2[i] > camera.position.z-1 && posZ2[i] < camera.position.z+1 && posX2[i]+(tam2[i]/2) > camera.position.x-1 && posX2[i]-(tam2[i]/2) < camera.position.x+1) {
             precolisao2 = true
             colisao2 = i;
-            console.log("col2")
         }
         else{
             if(i==0)
@@ -56,7 +54,8 @@ function sairParede(button){
         fakeCameraZ = camera.position.z - vel * Math.sin(camera.rotation.y)/100;
         fakeCameraX = camera.position.x + vel * Math.cos(camera.rotation.y)/100;
     }
-    if(!((posX[colisao] > fakeCameraX-1 && posX[colisao] < fakeCameraX+1 && posZ[colisao]+(tam[colisao]/2) > fakeCameraZ-1 && posZ[colisao]-(tam[colisao]/2) < fakeCameraZ+1)||(posZ2[colisao2] > fakeCameraZ-1 && posZ2[colisao2] < fakeCameraZ+1 && posX2[colisao2]+(tam2[colisao2]/2) > fakeCameraX-1 && posX2[colisao2]-(tam2[colisao2]/2) < fakeCameraX+1))){
+    var dist = 0.99;
+    if(!((posX[colisao] > fakeCameraX-dist && posX[colisao] < fakeCameraX+dist && posZ[colisao]+(tam[colisao]/2) > fakeCameraZ-dist && posZ[colisao]-(tam[colisao]/2) < fakeCameraZ+dist)||(posZ2[colisao2] > fakeCameraZ-dist && posZ2[colisao2] < fakeCameraZ+dist && posX2[colisao2]+(tam2[colisao2]/2) > fakeCameraX-dist && posX2[colisao2]-(tam2[colisao2]/2) < fakeCameraX+dist))){
         if(button == 87){
             camera.position.x -= vel * Math.sin(camera.rotation.y)/100;
             camera.position.z -= vel * Math.cos(camera.rotation.y)/100;
