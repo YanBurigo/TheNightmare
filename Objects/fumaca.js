@@ -1,9 +1,5 @@
 import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.118/build/three.module.js';
 
-import {GLTFLoader} from 'https://cdn.jsdelivr.net/npm/three@0.118.1/examples/jsm/loaders/GLTFLoader.js';
-import {OrbitControls} from 'https://cdn.jsdelivr.net/npm/three@0.118/examples/jsm/controls/OrbitControls.js';
-
-
 const _VS = `
 uniform float pointMultiplier;
 
@@ -35,7 +31,7 @@ void main() {
   vec2 coords = (gl_PointCoord - 0.5) * mat2(vAngle.x, vAngle.y, -vAngle.y, vAngle.x) + 0.5;
   gl_FragColor = texture2D(diffuseTexture, coords) * vColour;
 }`;
-var cont=0;
+
 
 class LinearSpline {
   constructor(lerp) {
@@ -43,14 +39,12 @@ class LinearSpline {
     this._lerp = lerp;
     
   }
-
   AddPoint(t, d) {
     this._points.push([t, d]);
   }
 
   Get(t) {
     let p1 = 0;
-
     for (let i = 0; i < this._points.length; i++) {
       if (this._points[i][0] >= t) {
         break;
@@ -76,7 +70,7 @@ class ParticleSystem {
   constructor(params) {
     const uniforms = {
         diffuseTexture: {
-            value: new THREE.TextureLoader().load('./Assets/smoke.png')
+            value: new THREE.TextureLoader().load('./Assets/smoke.webp')
         },
         pointMultiplier: {
             value: window.innerHeight / (2.0 * Math.tan(0.5 * 60.0 * Math.PI / 180.0))
@@ -104,7 +98,7 @@ class ParticleSystem {
     this._geometry.setAttribute('angle', new THREE.Float32BufferAttribute([], 1));
 
     this._points = new THREE.Points(this._geometry, this._material);
-
+    this._points.frustumCulled = false;
     params.parent.add(this._points);
 
     this._alphaSpline = new LinearSpline((t, a, b) => {
@@ -145,14 +139,14 @@ class ParticleSystem {
     for (let i = 0; i < n+10; i++) {
       const life = (Math.random() * 0.75 + 0.25) * 10.0;
       this._particles.push({
-          position: new THREE.Vector3(getRandomInt(-70,70),-1,getRandomInt(-70,70)),
+          position: new THREE.Vector3(getRandomInt(-70,70),-2,getRandomInt(-70,70)),
           size: (Math.random() * 0.5 + 0.5) * 2.0,
           colour: new THREE.Color(),
           alpha: 1.0,
           life: life,
           maxLife: life,
           rotation: Math.random() * 2.0 * Math.PI,
-          velocity: new THREE.Vector3(0, 0, 0),
+          velocity: new THREE.Vector3(0, 1, 0),
       });
     }
   }
@@ -229,24 +223,15 @@ class ParticleSystemDemo {
   }
 
   _Initialize() {
-    this._threejs = new THREE.WebGLRenderer({
-      antialias: true,
-    });
-    this._threejs.shadowMap.enabled = true;
-    this._threejs.shadowMap.type = THREE.PCFSoftShadowMap;
-    this._threejs.setPixelRatio(window.devicePixelRatio);
-    this._threejs.setSize(window.innerWidth, window.innerHeight);
-
-    document.body.appendChild(this._threejs.domElement);
+    render.shadowMap.enabled = true;
+    render.shadowMap.type = THREE.PCFSoftShadowMap;
+    render.setPixelRatio(window.devicePixelRatio);
+    render.setSize(window.innerWidth, window.innerHeight);
 
     window.addEventListener('resize', () => {
         this._OnWindowResize();
       }, false);
   
-      const fov = 60;
-      const aspect = 1920 / 1080;
-      const near = 1.0;
-      const far = 1000.0;
 
     this._particles = new ParticleSystem({
         parent: cena,
@@ -256,7 +241,13 @@ class ParticleSystemDemo {
 
     this._previousRAF = null;
     this._RAF();
-  }w
+  }
+
+  _OnWindowResize() {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    render.setSize(window.innerWidth, window.innerHeight);
+  }
 
   _RAF() {
     requestAnimationFrame((t) => {
@@ -266,7 +257,7 @@ class ParticleSystemDemo {
 
       this._RAF();
 
-      this._threejs.render(cena, camera);
+      render.render(cena, camera);
       this._Step(t - this._previousRAF);
       this._previousRAF = t;
     });
