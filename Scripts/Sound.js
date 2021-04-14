@@ -3,11 +3,19 @@ const playerwalking = document.getElementById("playerwalking");
 const ambiencemain = document.getElementById("ambiencemain");
 const ambiencesecond = document.getElementById("ambiencesecond");
 
+const winSound = document.getElementById("win");
+
 const nightmarewalking1 = document.getElementById("nightmarewalking1");
 const nightmarewalking2 = document.getElementById("nightmarewalking2");
 const nightmarewalking3 = document.getElementById("nightmarewalking3");
 const nightmarewalking4 = document.getElementById("nightmarewalking4");
 const nightmarewalking5 = document.getElementById("nightmarewalking5");
+
+var win = setInterval(() => {
+    if ((camera.position.x >= -1.55 && camera.position.x <= 5) && (camera.position.z <= -57.5 && camera.position.z >= -58.0)) {
+        winSound.play();
+    }
+}, 500);
 
 var nightmareWalking = setInterval(() => {
     arraySounds = ['nightmarewalking1', 'nightmarewalking2', 'nightmarewalking3', 'nightmarewalking4', 'nightmarewalking5'];
