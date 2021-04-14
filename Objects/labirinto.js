@@ -1,10 +1,10 @@
 var altura = 5;
-var materialLabirinto = new THREE.MeshLambertMaterial({color: 0x2f4538});
+var materialLabirinto = new THREE.MeshLambertMaterial({ color: 0x2f4538 });
 var mazeTexture = new THREE.TextureLoader().load("Assets/texturaLabirinto.webp");
 materialLabirinto.map = mazeTexture;
 
 
-var geometriaLabirinto = new THREE.BoxGeometry(1,altura,115);
+var geometriaLabirinto = new THREE.BoxGeometry(1, altura, 115);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -57.5;
@@ -14,7 +14,38 @@ posZ.push(labirinto.position.z);
 tam.push(115);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(55,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(10, altura, 1);
+var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
+labirinto.position.y = 2.5;
+labirinto.position.x = -53;
+labirinto.position.z = 66;
+posX2.push(labirinto.position.x);
+posZ2.push(labirinto.position.z);
+tam2.push(10);
+cena.add(labirinto);
+
+
+var geometriaLabirinto = new THREE.BoxGeometry(1, altura, 8);
+var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
+labirinto.position.y = 2.5;
+labirinto.position.x = -48;
+labirinto.position.z = 62;
+posX.push(labirinto.position.x);
+posZ.push(labirinto.position.z);
+tam.push(8);
+cena.add(labirinto);
+
+var geometriaLabirinto = new THREE.BoxGeometry(1, altura, 8.3);
+var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
+labirinto.position.y = 2.5;
+labirinto.position.x = -57.5;
+labirinto.position.z = 61.650;
+posX.push(labirinto.position.x);
+posZ.push(labirinto.position.z);
+tam.push(8.3);
+cena.add(labirinto);
+
+geometriaLabirinto = new THREE.BoxGeometry(55, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -30;
@@ -24,7 +55,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(55);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(55,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(55, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 30;
@@ -34,7 +65,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(55);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,115);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 115);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 57.5;
@@ -44,7 +75,7 @@ posZ.push(labirinto.position.z);
 tam.push(115);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(110,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(110, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 2.5;
@@ -54,7 +85,17 @@ posZ2.push(labirinto.position.z);
 tam2.push(110);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,5);
+geometriaLabirinto = new THREE.BoxGeometry(15, altura, 1);
+var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
+labirinto.position.y = 2.5;
+labirinto.position.x = 0.5;
+labirinto.position.z = -65.5;
+posX2.push(labirinto.position.x);
+posZ2.push(labirinto.position.z);
+tam2.push(15);
+cena.add(labirinto);
+
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 5);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -42.5;
@@ -64,7 +105,7 @@ posZ.push(labirinto.position.z);
 tam.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,25);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 25);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -52.5;
@@ -74,7 +115,7 @@ posZ.push(labirinto.position.z);
 tam.push(25);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(10,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(10, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -47.5;
@@ -84,7 +125,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(10);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,21);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 21);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -2.5;
@@ -94,7 +135,7 @@ posZ.push(labirinto.position.z);
 tam.push(21);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,5);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 5);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -7.5;
@@ -104,7 +145,7 @@ posZ.push(labirinto.position.z);
 tam.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,5);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 5);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -12.5;
@@ -114,7 +155,7 @@ posZ.push(labirinto.position.z);
 tam.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,10);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 10);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -17.5;
@@ -124,7 +165,7 @@ posZ.push(labirinto.position.z);
 tam.push(10);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(10,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(10, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -13;
@@ -134,7 +175,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(10);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(45,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(45, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -25;
@@ -144,7 +185,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(45);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(5,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(5, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -4.5;
@@ -154,7 +195,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,10);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 10);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -22.5;
@@ -164,7 +205,7 @@ posZ.push(labirinto.position.z);
 tam.push(10);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(15,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(15, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -29.5;
@@ -174,7 +215,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(15);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(20,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(20, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -37.5;
@@ -184,7 +225,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(20);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,25);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 25);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -47.5;
@@ -194,7 +235,7 @@ posZ.push(labirinto.position.z);
 tam.push(25);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(30,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(30, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -32.5;
@@ -204,7 +245,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(30);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,5);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 5);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -12.5;
@@ -214,7 +255,7 @@ posZ.push(labirinto.position.z);
 tam.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(5,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(5, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -50;
@@ -224,7 +265,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(50,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(50, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -32.5;
@@ -234,7 +275,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(50);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(5,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(5, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -45;
@@ -244,7 +285,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,5);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 5);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -42.5;
@@ -254,7 +295,7 @@ posZ.push(labirinto.position.z);
 tam.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,5);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 5);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -42.5;
@@ -264,7 +305,7 @@ posZ.push(labirinto.position.z);
 tam.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,5);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 5);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -37.5;
@@ -274,7 +315,7 @@ posZ.push(labirinto.position.z);
 tam.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,15);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 15);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -32.5;
@@ -284,7 +325,7 @@ posZ.push(labirinto.position.z);
 tam.push(15);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,5);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 5);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -27.5;
@@ -294,7 +335,7 @@ posZ.push(labirinto.position.z);
 tam.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,5);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 5);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -22.5;
@@ -304,7 +345,7 @@ posZ.push(labirinto.position.z);
 tam.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,5);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 5);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -17.5;
@@ -314,7 +355,7 @@ posZ.push(labirinto.position.z);
 tam.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,5);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 5);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -12.5;
@@ -324,7 +365,7 @@ posZ.push(labirinto.position.z);
 tam.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,5);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 5);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -37.5;
@@ -334,7 +375,7 @@ posZ.push(labirinto.position.z);
 tam.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(20,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(20, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -28;
@@ -344,7 +385,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(20);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(6,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(6, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -15;
@@ -354,7 +395,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(6);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(25,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(25, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -15;
@@ -364,7 +405,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(25);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(15,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(15, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -45;
@@ -374,7 +415,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(15);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(15,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(15, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -25;
@@ -384,7 +425,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(15);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,15);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 15);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -52.5;
@@ -394,7 +435,7 @@ posZ.push(labirinto.position.z);
 tam.push(15);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,45);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 45);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -17.5;
@@ -404,7 +445,7 @@ posZ.push(labirinto.position.z);
 tam.push(45);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,45);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 45);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -22.5;
@@ -414,7 +455,7 @@ posZ.push(labirinto.position.z);
 tam.push(45);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(25,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(25, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -35;
@@ -424,7 +465,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(25);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,19.5);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 19.5);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -47;
@@ -434,7 +475,7 @@ posZ.push(labirinto.position.z);
 tam.push(19.5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,35);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 35);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -27.5;
@@ -444,7 +485,7 @@ posZ.push(labirinto.position.z);
 tam.push(35);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(15,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(15, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -35;
@@ -454,7 +495,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(15);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(10,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(10, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -48;
@@ -464,7 +505,28 @@ posZ2.push(labirinto.position.z);
 tam2.push(10);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(5,altura,1);
+
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 8);
+var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
+labirinto.position.y = 2.5;
+labirinto.position.x = -7.5;
+labirinto.position.z = -62;
+posX.push(labirinto.position.x);
+posZ.push(labirinto.position.z);
+tam.push(8);
+cena.add(labirinto);
+
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 8);
+var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
+labirinto.position.y = 2.5;
+labirinto.position.x = 7.5;
+labirinto.position.z = -62;
+posX.push(labirinto.position.x);
+posZ.push(labirinto.position.z);
+tam.push(8);
+cena.add(labirinto);
+
+geometriaLabirinto = new THREE.BoxGeometry(5, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -40;
@@ -474,7 +536,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,15);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 15);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -37.5;
@@ -484,7 +546,7 @@ posZ.push(labirinto.position.z);
 tam.push(15);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,5);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 5);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -32.5;
@@ -494,7 +556,7 @@ posZ.push(labirinto.position.z);
 tam.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(5,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(5, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -30;
@@ -504,7 +566,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(5,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(5, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -35;
@@ -514,7 +576,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(20,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(20, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -42.7;
@@ -524,7 +586,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(20);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(5,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(5, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -45;
@@ -534,7 +596,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,21);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 21);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -32.5;
@@ -544,7 +606,7 @@ posZ.push(labirinto.position.z);
 tam.push(21);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(15,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(15, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -30;
@@ -554,7 +616,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(15);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(35,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(35, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -30;
@@ -564,7 +626,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(35);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,10);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 10);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -32.5;
@@ -574,7 +636,7 @@ posZ.push(labirinto.position.z);
 tam.push(10);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(15,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(15, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -45;
@@ -584,7 +646,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(15);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,7);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 7);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -52.5;
@@ -594,7 +656,7 @@ posZ.push(labirinto.position.z);
 tam.push(7);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,25);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 25);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -52.5;
@@ -604,7 +666,7 @@ posZ.push(labirinto.position.z);
 tam.push(25);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,10);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 10);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -52.5;
@@ -614,7 +676,7 @@ posZ.push(labirinto.position.z);
 tam.push(10);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(5,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(5, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -55;
@@ -624,7 +686,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(15,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(15, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -45;
@@ -634,7 +696,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(15);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,15);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 15);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -37.5;
@@ -644,7 +706,7 @@ posZ.push(labirinto.position.z);
 tam.push(15);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,20);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 20);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -47.5;
@@ -654,7 +716,7 @@ posZ.push(labirinto.position.z);
 tam.push(20);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(5,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(5, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -45.5;
@@ -664,7 +726,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(5,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(5, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -40.5;
@@ -674,7 +736,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,10);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 10);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -42.5;
@@ -684,7 +746,7 @@ posZ.push(labirinto.position.z);
 tam.push(10);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(5,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(5, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -40.5;
@@ -694,7 +756,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,7);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 7);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -27.5;
@@ -704,7 +766,7 @@ posZ.push(labirinto.position.z);
 tam.push(7);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(5,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(5, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -30;
@@ -714,7 +776,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(5,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(5, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -15;
@@ -724,7 +786,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(40,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(40, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 17;
@@ -734,7 +796,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(40);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(10,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(10, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 47;
@@ -744,7 +806,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(10);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(30,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(30, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -13;
@@ -754,7 +816,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(30);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,5);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 5);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -13;
@@ -764,7 +826,7 @@ posZ.push(labirinto.position.z);
 tam.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,5);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 5);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -22;
@@ -774,7 +836,7 @@ posZ.push(labirinto.position.z);
 tam.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,10);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 10);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -8;
@@ -784,7 +846,7 @@ posZ.push(labirinto.position.z);
 tam.push(10);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,20);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 20);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -3;
@@ -794,7 +856,7 @@ posZ.push(labirinto.position.z);
 tam.push(20);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,6);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 6);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -3;
@@ -804,7 +866,7 @@ posZ.push(labirinto.position.z);
 tam.push(6);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(10,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(10, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 2;
@@ -814,7 +876,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(10);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(25,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(25, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 24.5;
@@ -824,7 +886,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(25);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(5,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(5, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 55;
@@ -834,7 +896,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(5,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(5, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 50;
@@ -844,7 +906,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,10);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 10);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 47.5;
@@ -854,7 +916,7 @@ posZ.push(labirinto.position.z);
 tam.push(10);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,20);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 20);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 42.5;
@@ -864,7 +926,7 @@ posZ.push(labirinto.position.z);
 tam.push(20);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,20);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 20);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 52.5;
@@ -874,7 +936,7 @@ posZ.push(labirinto.position.z);
 tam.push(20);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(10,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(10, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 47.5;
@@ -884,7 +946,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(10);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,15);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 15);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 37.5;
@@ -894,7 +956,7 @@ posZ.push(labirinto.position.z);
 tam.push(15);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(5,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(5, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 35.5;
@@ -904,7 +966,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(10,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(10, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 18;
@@ -914,7 +976,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(10);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(10,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(10, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 18;
@@ -924,7 +986,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(10);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(5,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(5, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 30.5;
@@ -934,7 +996,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,10);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 10);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 27.5;
@@ -944,7 +1006,7 @@ posZ.push(labirinto.position.z);
 tam.push(10);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,10);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 10);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 12.5;
@@ -954,7 +1016,7 @@ posZ.push(labirinto.position.z);
 tam.push(10);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(25,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(25, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 35.5;
@@ -964,7 +1026,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(25);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,20);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 20);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 47.5;
@@ -974,7 +1036,7 @@ posZ.push(labirinto.position.z);
 tam.push(20);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,30);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 30);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 7.5;
@@ -984,7 +1046,7 @@ posZ.push(labirinto.position.z);
 tam.push(30);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(10,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(10, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 13;
@@ -994,7 +1056,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(10);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(25,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(25, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 29.5;
@@ -1004,7 +1066,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(25);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,5);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 5);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 17.5;
@@ -1014,7 +1076,7 @@ posZ.push(labirinto.position.z);
 tam.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,5);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 5);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 32.5;
@@ -1024,7 +1086,7 @@ posZ.push(labirinto.position.z);
 tam.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,10);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 10);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 42.5;
@@ -1034,7 +1096,7 @@ posZ.push(labirinto.position.z);
 tam.push(10);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,5);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 5);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 37.5;
@@ -1044,7 +1106,7 @@ posZ.push(labirinto.position.z);
 tam.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(15,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(15, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 35.5;
@@ -1054,7 +1116,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(15);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,10);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 10);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 13;
@@ -1064,7 +1126,7 @@ posZ.push(labirinto.position.z);
 tam.push(10);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,10);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 10);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 23;
@@ -1074,7 +1136,7 @@ posZ.push(labirinto.position.z);
 tam.push(10);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,5);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 5);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 18;
@@ -1084,7 +1146,7 @@ posZ.push(labirinto.position.z);
 tam.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,10);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 10);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 8;
@@ -1094,7 +1156,7 @@ posZ.push(labirinto.position.z);
 tam.push(10);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,5);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 5);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 3;
@@ -1104,7 +1166,7 @@ posZ.push(labirinto.position.z);
 tam.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(5,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(5, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 5;
@@ -1114,7 +1176,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(25,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(25, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 15;
@@ -1124,7 +1186,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(25);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(5,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(5, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 20.5;
@@ -1134,7 +1196,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,45);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 45);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 28;
@@ -1144,7 +1206,7 @@ posZ.push(labirinto.position.z);
 tam.push(45);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,25);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 25);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 33;
@@ -1154,7 +1216,7 @@ posZ.push(labirinto.position.z);
 tam.push(25);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,10);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 10);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 33;
@@ -1164,7 +1226,7 @@ posZ.push(labirinto.position.z);
 tam.push(10);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,5);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 5);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 38;
@@ -1174,7 +1236,7 @@ posZ.push(labirinto.position.z);
 tam.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,5);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 5);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 48;
@@ -1184,7 +1246,7 @@ posZ.push(labirinto.position.z);
 tam.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,10);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 10);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 53;
@@ -1194,7 +1256,7 @@ posZ.push(labirinto.position.z);
 tam.push(10);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(10,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(10, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 33;
@@ -1204,7 +1266,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(10);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(10,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(10, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 48;
@@ -1214,7 +1276,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(10);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(10,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(10, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 43;
@@ -1224,7 +1286,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(10);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(20,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(20, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 43;
@@ -1234,7 +1296,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(20);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(15,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(15, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 50;
@@ -1244,7 +1306,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(15);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(5,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(5, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 50;
@@ -1254,7 +1316,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(5,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(5, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 55;
@@ -1264,7 +1326,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(5,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(5, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 50;
@@ -1274,7 +1336,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(5,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(5, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 55;
@@ -1284,7 +1346,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(10,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(10, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 47.5;
@@ -1294,7 +1356,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(10);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(10,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(10, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 52;
@@ -1304,7 +1366,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(10);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(5,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(5, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 45;
@@ -1314,7 +1376,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,45);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 45);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 43;
@@ -1324,7 +1386,7 @@ posZ.push(labirinto.position.z);
 tam.push(45);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,30);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 30);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 48;
@@ -1334,7 +1396,7 @@ posZ.push(labirinto.position.z);
 tam.push(30);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,10);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 10);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 53;
@@ -1344,7 +1406,7 @@ posZ.push(labirinto.position.z);
 tam.push(10);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,50);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 50);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 38;
@@ -1354,7 +1416,7 @@ posZ.push(labirinto.position.z);
 tam.push(50);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(20,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(20, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 42.5;
@@ -1364,7 +1426,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(20);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,10);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 10);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 53;
@@ -1374,7 +1436,7 @@ posZ.push(labirinto.position.z);
 tam.push(10);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(5,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(5, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 35;
@@ -1384,7 +1446,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(6,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(6, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 30.5;
@@ -1394,7 +1456,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(6);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(20,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(20, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 12.5;
@@ -1404,7 +1466,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(20);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(10,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(10, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -2.5;
@@ -1414,7 +1476,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(10);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,5);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 5);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 2;
@@ -1424,7 +1486,7 @@ posZ.push(labirinto.position.z);
 tam.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,30);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 30);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 22;
@@ -1434,7 +1496,7 @@ posZ.push(labirinto.position.z);
 tam.push(30);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(5,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(5, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 20;
@@ -1444,7 +1506,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(5,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(5, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 20;
@@ -1454,7 +1516,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(5,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(5, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 15;
@@ -1464,7 +1526,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(5,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(5, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 15;
@@ -1474,7 +1536,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(10,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(10, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 12;
@@ -1484,7 +1546,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(10);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(25,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(25, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 0;
@@ -1494,7 +1556,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(25);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,5);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 5);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 7.5;
@@ -1504,7 +1566,7 @@ posZ.push(labirinto.position.z);
 tam.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,11);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 11);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 17.5;
@@ -1514,7 +1576,7 @@ posZ.push(labirinto.position.z);
 tam.push(11);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,6);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 6);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 17.5;
@@ -1524,7 +1586,7 @@ posZ.push(labirinto.position.z);
 tam.push(6);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,5);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 5);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 12.5;
@@ -1534,7 +1596,7 @@ posZ.push(labirinto.position.z);
 tam.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,10);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 10);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 12.5;
@@ -1544,7 +1606,7 @@ posZ.push(labirinto.position.z);
 tam.push(10);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(40,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(40, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 13.5;
@@ -1554,7 +1616,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(40);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(5,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(5, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 35;
@@ -1564,7 +1626,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,5);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 5);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 33;
@@ -1574,7 +1636,7 @@ posZ.push(labirinto.position.z);
 tam.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,5);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 5);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 33;
@@ -1584,7 +1646,7 @@ posZ.push(labirinto.position.z);
 tam.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,5);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 5);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 28;
@@ -1594,7 +1656,7 @@ posZ.push(labirinto.position.z);
 tam.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(6,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(6, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 30.5;
@@ -1604,7 +1666,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(6);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(5,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(5, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 26;
@@ -1614,7 +1676,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(25,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(25, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 6;
@@ -1624,7 +1686,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(25);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,6.5);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 6.5);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -7;
@@ -1634,7 +1696,7 @@ posZ.push(labirinto.position.z);
 tam.push(6.5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,5);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 5);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 23;
@@ -1644,7 +1706,7 @@ posZ.push(labirinto.position.z);
 tam.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(6,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(6, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 25.5;
@@ -1654,7 +1716,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(6);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,10);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 10);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 28;
@@ -1664,7 +1726,7 @@ posZ.push(labirinto.position.z);
 tam.push(10);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(15,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(15, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 15;
@@ -1674,7 +1736,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(15);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,5);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 5);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 18;
@@ -1684,7 +1746,7 @@ posZ.push(labirinto.position.z);
 tam.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,5);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 5);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 18;
@@ -1694,7 +1756,7 @@ posZ.push(labirinto.position.z);
 tam.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,30);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 30);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 2.5;
@@ -1704,7 +1766,7 @@ posZ.push(labirinto.position.z);
 tam.push(30);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,5);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 5);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 2.5;
@@ -1714,7 +1776,7 @@ posZ.push(labirinto.position.z);
 tam.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(5,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(5, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 21;
@@ -1724,7 +1786,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(16,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(16, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 10.5;
@@ -1734,7 +1796,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(16);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(16,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(16, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 20.5;
@@ -1744,7 +1806,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(16);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,10);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 10);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 12.5;
@@ -1754,7 +1816,7 @@ posZ.push(labirinto.position.z);
 tam.push(10);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(20,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(20, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -7.5;
@@ -1764,7 +1826,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(20);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(15,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(15, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -15.5;
@@ -1774,7 +1836,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(15);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(15,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(15, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -15.5;
@@ -1784,7 +1846,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(15);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(5,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(5, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -10;
@@ -1794,7 +1856,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,5);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 5);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -8;
@@ -1804,7 +1866,7 @@ posZ.push(labirinto.position.z);
 tam.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(10,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(10, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -7.5;
@@ -1814,7 +1876,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(10);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(5,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(5, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -5;
@@ -1824,7 +1886,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,10);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 10);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -3;
@@ -1834,7 +1896,7 @@ posZ.push(labirinto.position.z);
 tam.push(10);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,5);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 5);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -8;
@@ -1844,7 +1906,7 @@ posZ.push(labirinto.position.z);
 tam.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,30.5);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 30.5);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -12.5;
@@ -1854,7 +1916,7 @@ posZ.push(labirinto.position.z);
 tam.push(30.5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(5,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(5, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -9.5;
@@ -1864,7 +1926,7 @@ posZ2.push(labirinto.position.z);
 tam2.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,10.5);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 10.5);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -7.5;
@@ -1874,7 +1936,7 @@ posZ.push(labirinto.position.z);
 tam.push(10.5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,5);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 5);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -17.5;
@@ -1884,7 +1946,7 @@ posZ.push(labirinto.position.z);
 tam.push(5);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,15);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 15);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 2;
@@ -1894,7 +1956,7 @@ posZ.push(labirinto.position.z);
 tam.push(15);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,15);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 15);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 7;
@@ -1904,7 +1966,7 @@ posZ.push(labirinto.position.z);
 tam.push(15);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(1,altura,16);
+geometriaLabirinto = new THREE.BoxGeometry(1, altura, 16);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = -2.5;
@@ -1914,7 +1976,7 @@ posZ.push(labirinto.position.z);
 tam.push(16);
 cena.add(labirinto);
 
-geometriaLabirinto = new THREE.BoxGeometry(10,altura,1);
+geometriaLabirinto = new THREE.BoxGeometry(10, altura, 1);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);
 labirinto.position.y = 2.5;
 labirinto.position.x = 2;
