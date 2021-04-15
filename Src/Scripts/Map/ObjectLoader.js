@@ -47,10 +47,60 @@ class MonsterLoader{
   }
 }
 
+class PineLoader{
+  constructor() {
+      this._Initialize();
+  }
+  _Initialize() {
+  this._LoadModel();
+  }
+  _LoadModel() {
+      const loader = new GLTFLoader();
+      loader.load('Src/Objects/External/pine.gltf', (gltfPine) => {
+        gltfPine.scene.traverse(c => {
+          c.castShadow = true;
+          c.receiveShadow = true;
+          gltfPine.scene.scale.set(2,2,2)
+        });
+        gltfPine.scene.position.x = 15;
+        gltfPine.scene.position.z = -65;
+        cena.add(gltfPine.scene)
+      });
+
+  }
+}
+
+class MoonLoader{
+  constructor() {
+      this._Initialize();
+  }
+  _Initialize() {
+  this._LoadModel();
+  }
+  _LoadModel() {
+      const loader = new GLTFLoader();
+      loader.load('Src/Objects/External/moon.gltf', (gltfmoon) => {
+        gltfmoon.scene.traverse(c => {
+          c.castShadow = true;
+          c.receiveShadow = true;
+          gltfmoon.scene.scale.set(2,2,2)
+        });
+        gltfmoon.scene.position.x = -72;
+        gltfmoon.scene.position.y = 22;
+        gltfmoon.scene.position.z = 64;
+        cena.add(gltfmoon.scene)
+      });
+
+  }
+}
 let _Chave = null;
 let _Monster = null;
+let _Pine = null;
+let _Moon = null;
 
 window.addEventListener('DOMContentLoaded', () => {
     _Chave = new ObjectLoader();
     _Monster = new MonsterLoader();
+    _Pine = new PineLoader();
+    _Moon = new MoonLoader();
 });

@@ -7,6 +7,8 @@ var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHei
 //Renderizador utilizará a cena e a câmera para exibir a imagem
 var render = new THREE.WebGLRenderer();
 render.setSize(window.innerWidth, window.innerHeight);
+render.shadowMap.enabled = true;
+render.shadowMap.type = THREE.PCFSoftShadowMap;
 //O canvas será construído pelo renderizador
 var canvas = render.domElement;
 document.body.appendChild(canvas);
