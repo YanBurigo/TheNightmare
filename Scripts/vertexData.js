@@ -189,25 +189,25 @@ p30.z = 34;
 const p31 = new nodo();
 p31.valor = "p31";
 p31.prox = ["p29","p32"];
-p31.x = -20;
+p31.x = -5;
 p31.z = 24;
 
 const p32 = new nodo();
 p32.valor = "p32";
 p32.prox = ["p31","p33"];
-p32.x = -30;
+p32.x = -15;
 p32.z = 24;
 
 const p33 = new nodo();
 p33.valor = "p33";
 p33.prox = ["p32","p34"];
-p33.x = -30;
+p33.x = -15;
 p33.z = 29;
 
 const p34 = new nodo();
 p34.valor = "p34";
 p34.prox = ["p33"];
-p34.x = -25;
+p34.x = -10;
 p34.z = 29;
 
 const p35 = new nodo();
@@ -244,127 +244,127 @@ const p40 = new nodo();
 p40.valor = "p40";
 p40.prox = ["p39"];
 p40.x = 0;
-p40.z = 34;
+p40.z = 24;
 
 const p41 = new nodo();
 p41.valor = "p41";
 p41.prox = ["p38","p42"];
 p41.x = 5;
-p41.z = 24;
+p41.z = 14;
 
 const p42 = new nodo();
 p42.valor = "p42";
 p42.prox = ["p41","p43","p52"];
 p42.x = 10;
-p42.z = 24;
+p42.z = 14;
 
 const p43 = new nodo();
 p43.valor = "p43";
 p43.prox = ["p42","p44"];
 p43.x = 10;
-p43.z = 39;
+p43.z = 29;
 
 const p44 = new nodo();
 p44.valor = "p44";
 p44.prox = ["p43","p45"];
 p44.x = 15;
-p44.z = 39;
+p44.z = 29;
 
 const p45 = new nodo();
 p45.valor = "p45";
 p45.prox = ["p44","p46"];
 p45.x = 15;
-p45.z = 34;
+p45.z = 24;
 
 const p46 = new nodo();
 p46.valor = "p46";
 p46.prox = ["p45","p47"];
 p46.x = 30;
-p46.z = 34;
+p46.z = 24;
 
 const p47 = new nodo();
 p47.valor = "p47";
 p47.prox = ["p46","p48"];
 p47.x = 30;
-p47.z = 29;
+p47.z = 19;
 
 const p48 = new nodo();
 p48.valor = "p48";
 p48.prox = ["p47","p49"];
 p48.x = 35;
-p48.z = 29;
+p48.z = 19;
 
 const p49 = new nodo();
 p49.valor = "p49";
 p49.prox = ["p48","p50"];
 p49.x = 35;
-p49.z = 34;
+p49.z = 24;
 
 const p50 = new nodo();
 p50.valor = "p50";
 p50.prox = ["p49","p51"];
 p50.x = 40;
-p50.z = 34;
+p50.z = 24;
 
 const p51 = new nodo();
 p51.valor = "p51";
 p51.prox = ["p50"];
 p51.x = 40;
-p51.z = 29;
+p51.z = 19;
 
 const p52 = new nodo();
 p52.valor = "p52";
 p52.prox = ["p42","p53"];
 p52.x = 15;
-p52.z = 24;
+p52.z = 14;
 
 const p53 = new nodo();
 p53.valor = "p53";
 p53.prox = ["p52","p54"];
 p53.x = 15;
-p53.z = 29;
+p53.z = 19;
 
 const p54 = new nodo();
 p54.valor = "p54";
 p54.prox = ["p53","p55"];
 p54.x = 25;
-p54.z = 29;
+p54.z = 19;
 
 const p55 = new nodo();
 p55.valor = "p55";
 p55.prox = ["p54","p56"];
 p55.x = 25;
-p55.z = 24;
+p55.z = 14;
 
 const p56 = new nodo();
 p56.valor = "p56";
 p56.prox = ["p55","p57"];
 p56.x = 20;
-p56.z = 24;
+p56.z = 14;
 
 const p57 = new nodo();
 p57.valor = "p57";
 p57.prox = ["p56","p58"];
 p57.x = 20;
-p57.z = 19;
+p57.z = 9;
 
 const p58 = new nodo();
 p58.valor = "p58";
 p58.prox = ["p57","p59"];
 p58.x = 5;
-p58.z = 19;
+p58.z = 9;
 
 const p59 = new nodo();
 p59.valor = "p59";
 p59.prox = ["p58","p60"];
 p59.x = 5;
-p59.z = 14;
+p59.z = 4;
 
 const p60 = new nodo();
 p60.valor = "p60";
 p60.prox = ["p59"];
 p60.x = 15;
-p60.z = 14;
+p60.z = 4;
 
 const p61 = new nodo();
 p61.valor = "p61";
@@ -416,7 +416,7 @@ p68.z = 44;
 
 const p69 = new nodo();
 p69.valor = "p69";
-p69.prox = ["p66","p68","p71"];
+p69.prox = ["p67","p70","p71"];
 p69.x = 25;
 p69.z = 39;
 
@@ -1232,7 +1232,7 @@ p204.z = -6;
 
 const p205 = new nodo();
 p205.valor = "p205";
-p205.prox = ["p204","p206", "207"];
+p205.prox = ["p204","p206", "p207"];
 p205.x = 35;
 p205.z = -6;
 

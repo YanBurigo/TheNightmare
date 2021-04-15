@@ -9,6 +9,8 @@ const nightmarewalking3 = document.getElementById("nightmarewalking3");
 const nightmarewalking4 = document.getElementById("nightmarewalking4");
 const nightmarewalking5 = document.getElementById("nightmarewalking5");
 
+const jumpscareSound = document.getElementById("jumpscareSound");
+
 var nightmareWalking = setInterval(() => {
     arraySounds = ['nightmarewalking1', 'nightmarewalking2', 'nightmarewalking3', 'nightmarewalking4', 'nightmarewalking5'];
     var i = Math.floor(Math.random() * 4);
