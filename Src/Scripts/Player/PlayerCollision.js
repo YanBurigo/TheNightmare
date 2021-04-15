@@ -3,6 +3,7 @@
 var cubeGeometry = new THREE.BoxGeometry(1,1,1,1,1,1);
 var wireMaterial = new THREE.MeshBasicMaterial( { color: 0x00ff00, wireframe:true } )
 var PlayerHitbox = new THREE.Mesh( cubeGeometry, wireMaterial );
+
 PlayerHitbox.position.set(-55,2,60)
 if(debugMode == true){
     cena.add(PlayerHitbox)
@@ -31,5 +32,6 @@ function checkCollision(mesh1, mesh2){
     
     return (m1Xposition-m1Width/2 < m2Xposition+m2Width/2 && m1Xposition+m1Width/2 >  m2Xposition-m2Width/2
         && m1ZPosition+m1Depth/2 > m2ZPosition-m2Depth/2 && m1ZPosition-m1Depth/2 < m2ZPosition+m2Depth/2 )
-    
 }
+
+colisionLoaded = true;

@@ -24,9 +24,12 @@ var nightmareWalking = setInterval(() => {
     arraySounds = ['nightmarewalking1', 'nightmarewalking2', 'nightmarewalking3', 'nightmarewalking4', 'nightmarewalking5'];
     var i = Math.floor(Math.random() * 4);
     var sortedSound = document.getElementById(arraySounds[i]);
-    sortedSound.play();
+    if(startSound && startSound!=null){
+        sortedSound.play();
+    }
 }, 20000);
-
-var ambienceSound = setInterval(() => {
-    ambiencemain.play();
-}, 0);
+if(startSound && startSound!=null){
+    var ambienceSound = setInterval(() => {
+        ambiencemain.play();
+    }, 0);
+}

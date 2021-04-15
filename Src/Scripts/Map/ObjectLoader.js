@@ -9,7 +9,7 @@ class ObjectLoader{
     }
     _LoadModel() {
         const loader = new GLTFLoader();
-        loader.load('Objects/gltf/key.gltf', (gltf) => {
+        loader.load('Src/Objects/External/key.gltf', (gltf) => {
           gltf.scene.traverse(c => {
             c.castShadow = true;
           });
@@ -32,12 +32,12 @@ class MonsterLoader{
   }
   _LoadModel() {
       const loader = new GLTFLoader();
-      loader.load('Objects/gltf/Monster.gltf', (gltfMonster) => {
+      loader.load('Src/Objects/External/Monster.gltf', (gltfMonster) => {
         gltfMonster.scene.traverse(c => {
           c.castShadow = true;
-          gltfMonster.scene.position.z = 60
+          gltfMonster.scene.position.z = MonsterHitbox.position.z
           gltfMonster.scene.position.y = 0
-          gltfMonster.scene.position.x = -55
+          gltfMonster.scene.position.x = MonsterHitbox.position.x
           gltfMonster.scene.scale.set(0.7,0.7,0.7)
         });
         monster = gltfMonster.scene

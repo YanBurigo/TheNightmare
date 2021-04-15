@@ -7,3 +7,5 @@ cubo.position.x = 0;
 cubo.position.y = 0.5;
 cubo.position.z = 39;
 cena.add(cubo); //Adicionamos o cubo à cena
+
+cubeLoaded = true;

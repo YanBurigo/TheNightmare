@@ -1,10 +1,10 @@
 let materialArray = [];
-let texture_ft = new THREE.TextureLoader().load('Assets/space_ft.webp');
-let texture_bk = new THREE.TextureLoader().load('Assets/space_bk.webp');
-let texture_up = new THREE.TextureLoader().load('Assets/space_up.webp');
-let texture_dn = new THREE.TextureLoader().load('Assets/space_dn.webp');
-let texture_rt = new THREE.TextureLoader().load('Assets/space_rt.webp');
-let texture_lf = new THREE.TextureLoader().load('Assets/space_lf.webp');
+let texture_ft = new THREE.TextureLoader().load('Assets/Images/Skybox/space_ft.webp');
+let texture_bk = new THREE.TextureLoader().load('Assets/Images/Skybox/space_bk.webp');
+let texture_up = new THREE.TextureLoader().load('Assets/Images/Skybox/space_up.webp');
+let texture_dn = new THREE.TextureLoader().load('Assets/Images/Skybox/space_dn.webp');
+let texture_rt = new THREE.TextureLoader().load('Assets/Images/Skybox/space_rt.webp');
+let texture_lf = new THREE.TextureLoader().load('Assets/Images/Skybox/space_lf.webp');
 
 materialArray.push(new THREE.MeshBasicMaterial({ map: texture_ft }));
 materialArray.push(new THREE.MeshBasicMaterial({ map: texture_bk }));

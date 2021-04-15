@@ -1,6 +1,6 @@
 var altura = 5;
 var materialLabirinto = new THREE.MeshLambertMaterial({ color: 0x2f4538 });
-var mazeTexture = new THREE.TextureLoader().load("Assets/texturaLabirinto.webp");
+var mazeTexture = new THREE.TextureLoader().load("Assets/Images/Texture/texturaLabirinto.webp");
 materialLabirinto.map = mazeTexture;
 
 

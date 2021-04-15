@@ -70,7 +70,7 @@ class ParticleSystem {
   constructor(params) {
     const uniforms = {
         diffuseTexture: {
-            value: new THREE.TextureLoader().load('./Assets/smoke.webp')
+            value: new THREE.TextureLoader().load('./Assets/Images/Texture/smoke.webp')
         },
         pointMultiplier: {
             value: window.innerHeight / (2.0 * Math.tan(0.5 * 60.0 * Math.PI / 180.0))
@@ -139,7 +139,7 @@ class ParticleSystem {
     for (let i = 0; i < n+10; i++) {
       const life = (Math.random() * 0.75 + 0.25) * 10.0;
       this._particles.push({
-          position: new THREE.Vector3(getRandomInt(-70,70),-2,getRandomInt(-70,70)),
+          position: new THREE.Vector3(getRandomInt(-57.5,57.5),-2,getRandomInt(-57.5,57.5)),
           size: (Math.random() * 0.5 + 0.5) * 2.0,
           colour: new THREE.Color(),
           alpha: 1.0,
@@ -274,5 +274,7 @@ class ParticleSystemDemo {
 let _APP = null;
 
 window.addEventListener('DOMContentLoaded', () => {
-  _APP = new ParticleSystemDemo();
+  if(smokeEnable){
+    _APP = new ParticleSystemDemo();
+  }
 });

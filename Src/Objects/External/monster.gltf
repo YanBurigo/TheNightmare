@@ -218,34 +218,34 @@
     ],
     "images" : [
         {
-            "mimeType" : "image/png",
+            "mimeType" : "image/webp",
             "name" : "Freddy_skeleton",
-            "uri" : "Freddy_skeleton.png"
+            "uri" : "../../../Assets/Images/Monster/Freddy_skeleton.webp"
         },
         {
-            "mimeType" : "image/png",
+            "mimeType" : "image/webp",
             "name" : "Bonnie_skeleton",
-            "uri" : "Bonnie_skeleton.png"
+            "uri" : "../../../Assets/Images/Monster/Bonnie_skeleton.webp"
         },
         {
-            "mimeType" : "image/png",
+            "mimeType" : "image/webp",
             "name" : "FreddyNormal",
-            "uri" : "FreddyNormal.png"
+            "uri" : "../../../Assets/Images/Monster/FreddyNormal.webp"
         },
         {
-            "mimeType" : "image/png",
+            "mimeType" : "image/webp",
             "name" : "Bonnie_Body",
-            "uri" : "Bonnie_Body.png"
+            "uri" : "../../../Assets/Images/Monster/Bonnie_Body.webp"
         },
         {
-            "mimeType" : "image/png",
+            "mimeType" : "image/webp",
             "name" : "Bonnie_Parts",
-            "uri" : "Bonnie_Parts.png"
+            "uri" : "../../../Assets/Images/Monster/Bonnie_Parts.webp"
         },
         {
-            "mimeType" : "image/png",
+            "mimeType" : "image/webp",
             "name" : "Bonnie_Head",
-            "uri" : "Bonnie_Head.png"
+            "uri" : "../../../Assets/Images/Monster/Bonnie_Head.webp"
         }
     ],
     "accessors" : [

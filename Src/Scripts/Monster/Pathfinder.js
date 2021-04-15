@@ -1,5 +1,5 @@
 var caminhoPercorrido = [];
-var posicaoInicial = "p1" //+ getRandomInt(1,267);
+var posicaoInicial = "p"+ getRandomInt(1,267);
 caminhoPercorrido[0] = chamar("p0");
 caminhoPercorrido[1] = chamar(posicaoInicial);
 MonsterHitbox.position.x = caminhoPercorrido[1].x;
@@ -8,9 +8,12 @@ MonsterHitbox2 = new THREE.Mesh(new THREE.BoxGeometry(2,1,2), new THREE.MeshLamb
 var valor;
 var cont = 0;
 var aux;
-var velMonster = 5;
 
-var intervalo = setInterval(() => {
+if(showMonsterInitialPosition){
+    alert("X: " + MonsterHitbox.position.x + "\nZ: " + MonsterHitbox.position.z + "\nVérice: " + caminhoPercorrido[1].valor)
+}
+
+var movimentacaoMonster = setInterval(() => {
     valor = getRandomInt(0,caminhoPercorrido[1].prox.length);
     if(caminhoPercorrido[1].prox.length == 1 && cont==0){
         caminhoPercorrido[0]=caminhoPercorrido[1];
@@ -240,3 +243,5 @@ var intervalo = setInterval(() => {
         }
     }
 }, (1200 * velMonster));
+
+monsterLoaded = true;
