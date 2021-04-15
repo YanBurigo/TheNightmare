@@ -3,7 +3,7 @@ var movimentBack = 0;
 var movimentLeft = 0;
 var movimentRight = 0;
 
-var vel = 3;
+var vel = 2;
 
 document.onkeydown = function (evt) {
     switch (evt.keyCode) {

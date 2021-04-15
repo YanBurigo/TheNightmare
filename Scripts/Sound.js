@@ -11,6 +11,9 @@ const nightmarewalking3 = document.getElementById("nightmarewalking3");
 const nightmarewalking4 = document.getElementById("nightmarewalking4");
 const nightmarewalking5 = document.getElementById("nightmarewalking5");
 
+
+const jumpscareSound = document.getElementById("jumpscareSound");
+
 var win = setInterval(() => {
     if ((camera.position.x >= -1.55 && camera.position.x <= 5) && (camera.position.z <= -57.5 && camera.position.z >= -58.0)) {
         winSound.play();

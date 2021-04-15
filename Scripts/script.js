@@ -30,8 +30,14 @@ camera.position.x = -0.2;
 
 Orbit Controls:
 var controles = new THREE.OrbitControls(camera, render.domElement);
-
 */
+
+var MonsterHitbox;
+var PlayerHitbox;
+var MonsterHitbox2;
+var jumpscareCont = 0;
+var monster;
+var chave;
 
 function desenhar() {
     console.log("x=", camera.position.x, " y=", camera.position.y, "z=", camera.position.z);
@@ -39,8 +45,26 @@ function desenhar() {
     requestAnimationFrame(desenhar);
 
     PlayerHitbox.position.set(camera.position.x, camera.position.y, camera.position.z);     //necessário para sincronizar a hitbox do Player com a camera
-    if (checkCollision(PlayerHitbox, MonsterHitbox)) {
-        console.log("Colisão");
+
+    if(checkCollision(PlayerHitbox, MonsterHitbox)){
+        var jumpscare = document.getElementById("jumpscare")
+        jumpscareSound.play();
+        jumpscare.innerHTML = '<img src="https://thumbs.gfycat.com/ForkedSnappyAsianelephant-size_restricted.gif" id="jumpscare" style="position:absolute; width:100%; height:100%"/>'
+        jumpscareCont ++;
+    }
+    else if(jumpscareCont > 0){
+        console.log("ok")
+        var jumpscare = document.getElementById("jumpscare")
+        jumpscare.innerHTML = '<div id="jumpscare" />'
+        jumpscareCont = 0;
+
+    }
+    if(checkCollision(PlayerHitbox, MonsterHitbox2)){
+        console.log("Colisão2");
+    }
+    if(checkCollision(PlayerHitbox, cubo)){
+        cena.remove(chave)
+        velMonster = 1;
     }
 }
 requestAnimationFrame(desenhar);

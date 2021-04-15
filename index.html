@@ -12,7 +12,7 @@
     </style>
 </head>
 
-<body>
+<body id="element">
     <audio id="playerwalking" src="Assets/Sounds/playerwalking.mp3"></audio>
     <audio id="ambiencemain" src="Assets/Sounds/ambiencemain.mp3"></audio>
     <audio id="ambiencesecond" src="Assets/Sounds/ambiencesecond.mp3"></audio>
@@ -22,16 +22,22 @@
     <audio id="nightmarewalking3" src="Assets/Sounds/nightmarewalking3.mp3"></audio>
     <audio id="nightmarewalking4" src="Assets/Sounds/nightmarewalking4.mp3"></audio>
     <audio id="nightmarewalking5" src="Assets/Sounds/nightmarewalking5.mp3"></audio>
+    <audio id="jumpscareSound" src="Assets/Sounds/jumpscareSound.mp3"></audio>
+    
+    <div id="jumpscare"></div>
 
     <script src="Scripts/three.min.js"></script>
 
     <!--<script src="Scripts/OrbitControls.js"></script>-->
+    <script src="Scripts/Sound.js"></script>
     <script src="Scripts/script.js"></script>
     <script src="Scripts/PlayerCollision.js"></script>
     <script src="Scripts/collision.js"></script>
-    <script src="Scripts/Sound.js"></script>
     <script src="Scripts/FirstPersonControls.js"></script>
     <script src="Scripts/PointerLock.js"></script>
+    <script src="Scripts/vertexData.js"></script>
+    <script src="Scripts/vertexCall.js"></script>
+    <script src="Scripts/pathfinder.js"></script>
 
     <!--Adicionar Objetos sempre após script.js-->
     <!-- <script src="Objects/fumaca.js" type="module"></script> -->
@@ -39,8 +45,9 @@
     <script src="Objects/luzAmbiente.js"></script>
     <script src="Objects/pontoLuz.js"></script>
     <script src="Objects/plano.js"></script>
-    <!--<script src="Objects/cubo.js"></script>-->
+    <script src="Objects/cubo.js"></script>
     <script src="Objects/labirinto.js"></script>
+    <script src="Scripts/objectLoader.js" type="module"></script>
 
 </body>
 

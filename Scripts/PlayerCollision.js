@@ -12,7 +12,7 @@ if(debugMode == true){
 var MonsterHitbox = new THREE.Mesh(new THREE.BoxGeometry(2,2,2), new THREE.MeshLambertMaterial({color: 0xff4000}));
 MonsterHitbox.position.y = 2;
 MonsterHitbox.position.x = -55;
-MonsterHitbox.position.z = 50;
+MonsterHitbox.position.z = 48;
 if(debugMode == true){
     cena.add(MonsterHitbox);
 }
