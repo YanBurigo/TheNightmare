@@ -1,0 +1,221 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.5.17",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "3DPaz_fir-tree_01",
+            "rotation" : [
+                0,
+                0.04361938312649727,
+                0,
+                0.9990482330322266
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "name" : "3DPaz_fir-tree_trunk",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 0
+                },
+                "roughnessFactor" : 0.858578622341156
+            }
+        },
+        {
+            "alphaMode" : "BLEND",
+            "doubleSided" : true,
+            "name" : "3DPaz_fir-tree_leaves",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 1
+                },
+                "roughnessFactor" : 0.858578622341156
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Malha",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "indices" : 3,
+                    "material" : 0
+                },
+                {
+                    "attributes" : {
+                        "POSITION" : 4,
+                        "NORMAL" : 5,
+                        "TEXCOORD_0" : 6
+                    },
+                    "indices" : 7,
+                    "material" : 1
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        },
+        {
+            "sampler" : 0,
+            "source" : 1
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/webp",
+            "name" : "tronco",
+            "uri" : "../../../Assets/Images/Tree/tronco.webp"
+        },
+        {
+            "mimeType" : "image/webp",
+            "name" : "folhas",
+            "uri" : "../../../Assets/Images/Tree/folhas.webp"
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 54345,
+            "max" : [
+                3.6872215270996094,
+                15.002421379089355,
+                3.766535997390747
+            ],
+            "min" : [
+                -3.855839252471924,
+                -0.006528392434120178,
+                -3.74912166595459
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 54345,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 54345,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 199800,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5126,
+            "count" : 212376,
+            "max" : [
+                3.8959312438964844,
+                15.20518970489502,
+                3.9576637744903564
+            ],
+            "min" : [
+                -4.066656112670898,
+                0.7908188700675964,
+                -3.933192729949951
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 5,
+            "componentType" : 5126,
+            "count" : 212376,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 6,
+            "componentType" : 5126,
+            "count" : 212376,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 7,
+            "componentType" : 5125,
+            "count" : 318564,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 652140,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 652140,
+            "byteOffset" : 652140
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 434760,
+            "byteOffset" : 1304280
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 399600,
+            "byteOffset" : 1739040
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 2548512,
+            "byteOffset" : 2138640
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 2548512,
+            "byteOffset" : 4687152
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 1699008,
+            "byteOffset" : 7235664
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 1274256,
+            "byteOffset" : 8934672
+        }
+    ],
+    "samplers" : [
+        {
+            "magFilter" : 9729,
+            "minFilter" : 9987
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 10208928,
+            "uri" : "pine.bin"
+        }
+    ]
+}

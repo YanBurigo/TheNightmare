@@ -22,23 +22,10 @@ var forma = new THREE.Mesh(
 //forma.material.side = THREE.DoubleSide;
 
 var planTexture = new THREE.TextureLoader().load("Assets/Images/Texture/texturaChao.webp");
-var materialChao = new THREE.MeshBasicMaterial({ color: 0x333333, map: planTexture });
+var materialChao = new THREE.MeshLambertMaterial({ color: 0x333333, map: planTexture });
 
 var geometriaChao = new THREE.BoxGeometry(115, 0.1, 115);
 var chao = new THREE.Mesh(geometriaChao, materialChao);
+chao.receiveShadow = true;
 cena.add(chao);
 cena.add(forma);
-
-var geometriaChao = new THREE.BoxGeometry(9.5, 0.1, 11.5);
-var chao = new THREE.Mesh(geometriaChao, materialChao);
-chao.position.x = -52.5;
-chao.position.y = -0.1;
-chao.position.z = 60;
-cena.add(chao);
-
-var geometriaChao = new THREE.BoxGeometry(15, 0.1, 11);
-var chao = new THREE.Mesh(geometriaChao, materialChao);
-chao.position.x = 0;
-chao.position.y = -0.1;
-chao.position.z = -60;
-cena.add(chao);
