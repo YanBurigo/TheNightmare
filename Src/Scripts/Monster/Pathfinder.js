@@ -8,12 +8,25 @@ MonsterHitbox2 = new THREE.Mesh(new THREE.BoxGeometry(2,1,2), new THREE.MeshLamb
 var valor;
 var cont = 0;
 var aux;
+var picketKey = true;
 
 if(showMonsterInitialPosition){
     alert("X: " + MonsterHitbox.position.x + "\nZ: " + MonsterHitbox.position.z + "\nVérice: " + caminhoPercorrido[1].valor)
 }
 
 var movimentacaoMonster = setInterval(() => {
+    if(pegouChave && picketKey){
+        clearInterval(movimentacaoMonster);
+        velMonster = velMonsterAfterKey;
+        picketKey = false
+        setInterval(() => {
+            movimentMonster();
+        }, 1200 * velMonster);
+    }
+    movimentMonster();
+}, (1200 * velMonster));
+
+function movimentMonster(){
     valor = getRandomInt(0,caminhoPercorrido[1].prox.length);
     if(caminhoPercorrido[1].prox.length == 1 && cont==0){
         caminhoPercorrido[0]=caminhoPercorrido[1];
@@ -242,6 +255,6 @@ var movimentacaoMonster = setInterval(() => {
             }, 10);
         }
     }
-}, (1200 * velMonster));
+}
 
 monsterLoaded = true;

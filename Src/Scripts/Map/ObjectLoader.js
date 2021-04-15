@@ -83,11 +83,11 @@ class MoonLoader{
         gltfmoon.scene.traverse(c => {
           c.castShadow = true;
           c.receiveShadow = true;
-          gltfmoon.scene.scale.set(2,2,2)
+          gltfmoon.scene.scale.set(10,10,10)
         });
-        gltfmoon.scene.position.x = -72;
-        gltfmoon.scene.position.y = 22;
-        gltfmoon.scene.position.z = 64;
+        gltfmoon.scene.position.x = -90;
+        gltfmoon.scene.position.y = 36;
+        gltfmoon.scene.position.z = 80;
         cena.add(gltfmoon.scene)
       });
 

@@ -5,7 +5,7 @@ var cena = new THREE.Scene();
 //Observar a cena
 var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 //Renderizador utilizará a cena e a câmera para exibir a imagem
-var render = new THREE.WebGLRenderer();
+var render = new THREE.WebGLRenderer({ antialias: true});
 render.setSize(window.innerWidth, window.innerHeight);
 render.shadowMap.enabled = true;
 render.shadowMap.type = THREE.PCFSoftShadowMap;
@@ -27,6 +27,7 @@ var MonsterHitbox2;
 var jumpscareCont = 0;
 var monster;
 var chave;
+var pegouChave = false;
 
 function desenhar() {
     render.render(cena, camera);
@@ -57,7 +58,7 @@ function desenhar() {
     if(colisionLoaded && cubeLoaded){
         if(checkCollision(PlayerHitbox, cubo)){
             cena.remove(chave)
-            velMonster = velMonsterAfterKey;
+            pegouChave = true;
         }
     }
 }

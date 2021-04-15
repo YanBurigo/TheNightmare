@@ -10,3 +10,4 @@ var vel = 2;                            //Velocidade do jogador(padrão 2, quand
 var velMonster = 5;                     //Velocidade do monstro(padrão 5, quando menor mais rápido)
 var velMonsterAfterKey = 1              //Velocidade do monstro após pegar a chave(padrão 1, quando menor mais rápido)
 var showMonsterInitialPosition = false  //Monstra a posição inicial do monstro e seu vérice
+var globalLighting = 2                  //Nivel de iluminação global(padrão 2, quando maior mais claro)

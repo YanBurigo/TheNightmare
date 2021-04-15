@@ -28,8 +28,8 @@ var nightmareWalking = setInterval(() => {
         sortedSound.play();
     }
 }, 20000);
-if(startSound && startSound!=null){
-    var ambienceSound = setInterval(() => {
+var ambienceSound = setInterval(() => {
+    if(startSound && startSound!=null){
         ambiencemain.play();
-    }, 0);
-}
+    }
+}, 0);
