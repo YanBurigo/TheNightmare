@@ -11,11 +11,26 @@ render.setSize(window.innerWidth, window.innerHeight);
 var canvas = render.domElement;
 document.body.appendChild(canvas);
 
-var debugMode = false;       //Variavel de debug responsavel por mostrar elementos invisiveis (ex: hitboxes) caso for true
+var debugMode = true;       //Variavel de debug responsavel por mostrar elementos invisiveis (ex: hitboxes) caso for true
 
-camera.position.z = 60;
+camera.position.z = 64
+camera.position.y = 2
+camera.position.x = -49.31
+
+/*
+
+Posição da camera para ir direto pro final
+camera.position.z = -49;
 camera.position.y = 2;
-camera.position.x = -55;
+camera.position.x = -0.2;
+
+*/
+
+/*
+
+Orbit Controls:
+var controles = new THREE.OrbitControls(camera, render.domElement);
+*/
 
 var MonsterHitbox;
 var PlayerHitbox;
@@ -24,11 +39,13 @@ var jumpscareCont = 0;
 var monster;
 var chave;
 
-function desenhar(){
+function desenhar() {
+    console.log("x=", camera.position.x, " y=", camera.position.y, "z=", camera.position.z);
     render.render(cena, camera);
     requestAnimationFrame(desenhar);
 
     PlayerHitbox.position.set(camera.position.x, camera.position.y, camera.position.z);     //necessário para sincronizar a hitbox do Player com a camera
+
     if(checkCollision(PlayerHitbox, MonsterHitbox)){
         var jumpscare = document.getElementById("jumpscare")
         jumpscareSound.play();
@@ -56,4 +73,4 @@ function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min)) + min;
-  }
+}
