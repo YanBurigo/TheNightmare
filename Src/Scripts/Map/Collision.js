@@ -8,6 +8,7 @@ var posZ2 = []
 var tam2 = []
 var precolisao2 = false
 var colisao2 = 0
+var dist = 0.8;
 
 var intervalo = setInterval(() => {
     for(var i=0; i<posX.length;i++){
@@ -38,6 +39,7 @@ var intervalo = setInterval(() => {
 function sairParede(button){
     var fakeCameraX;
     var fakeCameraZ;
+    var testee = 0
     if(button == 87){
         fakeCameraX = camera.position.x - vel * Math.sin(camera.rotation.y)/100;
         fakeCameraZ = camera.position.z - vel * Math.cos(camera.rotation.y)/100;
@@ -54,23 +56,35 @@ function sairParede(button){
         fakeCameraZ = camera.position.z - vel * Math.sin(camera.rotation.y)/100;
         fakeCameraX = camera.position.x + vel * Math.cos(camera.rotation.y)/100;
     }
-    var dist = 0.99;
     if(!((posX[colisao] > fakeCameraX-dist && posX[colisao] < fakeCameraX+dist && posZ[colisao]+(tam[colisao]/2) > fakeCameraZ-dist && posZ[colisao]-(tam[colisao]/2) < fakeCameraZ+dist)||(posZ2[colisao2] > fakeCameraZ-dist && posZ2[colisao2] < fakeCameraZ+dist && posX2[colisao2]+(tam2[colisao2]/2) > fakeCameraX-dist && posX2[colisao2]-(tam2[colisao2]/2) < fakeCameraX+dist))){
         if(button == 87){
             camera.position.x -= vel * Math.sin(camera.rotation.y)/100;
             camera.position.z -= vel * Math.cos(camera.rotation.y)/100;
+            dist = 0.8;
         }
         else if(button == 83){
             camera.position.z += vel * Math.cos(camera.rotation.y)/100;
             camera.position.x += vel * Math.sin(camera.rotation.y)/100;
+            dist = 0.8;
         }
         else if(button == 65){
             camera.position.z += vel * Math.sin(camera.rotation.y)/100;
             camera.position.x -= vel * Math.cos(camera.rotation.y)/100;
+            dist = 0.8;
         }
         else if(button == 68){
             camera.position.z -= vel * Math.sin(camera.rotation.y)/100;
             camera.position.x += vel * Math.cos(camera.rotation.y)/100;
+            dist = 0.8;
+        }
+    }
+    else{
+        var presoPraCima = !((posX[colisao] > (camera.position.x - vel * Math.sin(camera.rotation.y)/100)-dist && posX[colisao] < (camera.position.x - vel * Math.sin(camera.rotation.y)/100)+dist && posZ[colisao]+(tam[colisao]/2) > (camera.position.z - vel * Math.cos(camera.rotation.y)/100)-dist && posZ[colisao]-(tam[colisao]/2) < (camera.position.z - vel * Math.cos(camera.rotation.y)/100)+dist)||(posZ2[colisao2] > (camera.position.z - vel * Math.cos(camera.rotation.y)/100)-dist && posZ2[colisao2] < (camera.position.z - vel * Math.cos(camera.rotation.y)/100)+dist && posX2[colisao2]+(tam2[colisao2]/2) > (camera.position.x - vel * Math.sin(camera.rotation.y)/100)-dist && posX2[colisao2]-(tam2[colisao2]/2) < (camera.position.x - vel * Math.sin(camera.rotation.y)/100)+dist))
+        var presoPraTras = !((posX[colisao] > (camera.position.x + vel * Math.sin(camera.rotation.y)/100)-dist && posX[colisao] < (camera.position.x + vel * Math.sin(camera.rotation.y)/100)+dist && posZ[colisao]+(tam[colisao]/2) > (camera.position.z + vel * Math.cos(camera.rotation.y)/100)-dist && posZ[colisao]-(tam[colisao]/2) < (camera.position.z + vel * Math.cos(camera.rotation.y)/100)+dist)||(posZ2[colisao2] > (camera.position.z + vel * Math.cos(camera.rotation.y)/100)-dist && posZ2[colisao2] < (camera.position.z + vel * Math.cos(camera.rotation.y)/100)+dist && posX2[colisao2]+(tam2[colisao2]/2) > (camera.position.x + vel * Math.sin(camera.rotation.y)/100)-dist && posX2[colisao2]-(tam2[colisao2]/2) < (camera.position.x + vel * Math.sin(camera.rotation.y)/100)+dist))
+        var presoPraEsquerda = !((posX[colisao] > (camera.position.x - vel * Math.cos(camera.rotation.y)/100)-dist && posX[colisao] < (camera.position.x - vel * Math.cos(camera.rotation.y)/100)+dist && posZ[colisao]+(tam[colisao]/2) > (camera.position.z + vel * Math.sin(camera.rotation.y)/100)-dist && posZ[colisao]-(tam[colisao]/2) < (camera.position.z + vel * Math.sin(camera.rotation.y)/100)+dist)||(posZ2[colisao2] > (camera.position.z + vel * Math.sin(camera.rotation.y)/100)-dist && posZ2[colisao2] < (camera.position.z + vel * Math.sin(camera.rotation.y)/100)+dist && posX2[colisao2]+(tam2[colisao2]/2) > (camera.position.x - vel * Math.cos(camera.rotation.y)/100)-dist && posX2[colisao2]-(tam2[colisao2]/2) < (camera.position.x - vel * Math.cos(camera.rotation.y)/100)+dist))
+        var presoPraDireita = !((posX[colisao] > (camera.position.x + vel * Math.cos(camera.rotation.y)/100)-dist && posX[colisao] < (camera.position.x + vel * Math.cos(camera.rotation.y)/100)+dist && posZ[colisao]+(tam[colisao]/2) > (camera.position.z - vel * Math.sin(camera.rotation.y)/100)-dist && posZ[colisao]-(tam[colisao]/2) < (camera.position.z - vel * Math.sin(camera.rotation.y)/100)+dist)||(posZ2[colisao2] > (camera.position.z - vel * Math.sin(camera.rotation.y)/100)-dist && posZ2[colisao2] < (camera.position.z - vel * Math.sin(camera.rotation.y)/100)+dist && posX2[colisao2]+(tam2[colisao2]/2) > (camera.position.x + vel * Math.cos(camera.rotation.y)/100)-dist && posX2[colisao2]-(tam2[colisao2]/2) < (camera.position.x + vel * Math.cos(camera.rotation.y)/100)+dist))
+        if(!presoPraCima && !presoPraTras && !presoPraEsquerda && !presoPraDireita){
+            dist -= 0.1
         }
     }
 }

@@ -35,6 +35,7 @@ class MonsterLoader{
       loader.load('Src/Objects/External/Monster.gltf', (gltfMonster) => {
         gltfMonster.scene.traverse(c => {
           c.castShadow = true;
+          c.receiveShadow = true;
           gltfMonster.scene.position.z = MonsterHitbox.position.z
           gltfMonster.scene.position.y = 0
           gltfMonster.scene.position.x = MonsterHitbox.position.x
