@@ -56,7 +56,11 @@ function desenhar() {
         }
     }
     if(colisionLoaded && cubeLoaded){
-        if(checkCollision(PlayerHitbox, cubo)){
+        if(checkCollision(PlayerHitbox, cubo) && posX2.length > 98){
+            cena.remove(paredeLabirinto);
+            posX2.shift();
+            posZ2.shift();
+            tam2.shift();
             cena.remove(chave)
             pegouChave = true;
         }
