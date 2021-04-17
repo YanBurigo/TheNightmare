@@ -3,6 +3,17 @@ var materialLabirinto = new THREE.MeshLambertMaterial({ color: 0x2f4538 });
 var mazeTexture = new THREE.TextureLoader().load("Assets/Images/Texture/texturaLabirinto.webp");
 materialLabirinto.map = mazeTexture;
 
+geometriaParedeLabirinto = new THREE.BoxGeometry(5, altura, 1);
+var paredeLabirinto = new THREE.Mesh(geometriaParedeLabirinto, materialLabirinto);
+paredeLabirinto.position.y = 2.5;
+paredeLabirinto.position.x = 0;
+paredeLabirinto.position.z = -57.5;
+paredeLabirinto.receiveShadow = true;
+paredeLabirinto.castShadow = true;
+posX2.push(paredeLabirinto.position.x);
+posZ2.push(paredeLabirinto.position.z);
+tam2.push(55);
+cena.add(paredeLabirinto);
 
 var geometriaLabirinto = new THREE.BoxGeometry(1, altura, 115);
 var labirinto = new THREE.Mesh(geometriaLabirinto, materialLabirinto);

@@ -28,13 +28,11 @@ var jumpscareCont = 0;
 var monster;
 var chave;
 var pegouChave = false;
+var vel = velPlayer;
 
 function desenhar() {
     render.render(cena, camera);
     requestAnimationFrame(desenhar);
-
-       
-
     if(jumpscareEnable && colisionLoaded){
         PlayerHitbox.position.set(camera.position.x, camera.position.y, camera.position.z);  //necessário para sincronizar a hitbox do Player com a camera
         if(checkCollision(PlayerHitbox, MonsterHitbox)){
@@ -56,8 +54,13 @@ function desenhar() {
         }
     }
     if(colisionLoaded && cubeLoaded){
-        if(checkCollision(PlayerHitbox, cubo)){
+        if(checkCollision(PlayerHitbox, cubo) && posX2.length > 98){
+            cena.remove(paredeLabirinto);
+            posX2.shift();
+            posZ2.shift();
+            tam2.shift();
             cena.remove(chave)
+            keyMonster.play();
             pegouChave = true;
         }
     }

@@ -21,12 +21,16 @@ if(!orbitControlsEnable){
 
   document.addEventListener('pointerlockerror', lockError, false);
   document.addEventListener('mozpointerlockerror', lockError, false);
-  canvas.requestPointerLock()
+  if(start){
+    canvas.requestPointerLock()
+  }
+  
   function lockError(e) {
     canvas.requestPointerLock()
   }
 
   document.onmousedown = function (evt){
+    if(start)
       canvas.requestPointerLock()
   }
 }
