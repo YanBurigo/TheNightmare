@@ -28,6 +28,7 @@ var jumpscareCont = 0;
 var monster;
 var chave;
 var pegouChave = false;
+var vel = velPlayer;
 
 function desenhar() {
     render.render(cena, camera);
@@ -62,6 +63,7 @@ function desenhar() {
             posZ2.shift();
             tam2.shift();
             cena.remove(chave)
+            keyMonster.play();
             pegouChave = true;
         }
     }

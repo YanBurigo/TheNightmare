@@ -10,7 +10,7 @@ const nightmarewalking2 = document.getElementById("nightmarewalking2");
 const nightmarewalking3 = document.getElementById("nightmarewalking3");
 const nightmarewalking4 = document.getElementById("nightmarewalking4");
 const nightmarewalking5 = document.getElementById("nightmarewalking5");
-
+const keyMonster = document.getElementById("keyMonster");
 
 const jumpscareSound = document.getElementById("jumpscareSound");
 

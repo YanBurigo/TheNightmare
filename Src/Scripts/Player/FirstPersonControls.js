@@ -24,6 +24,10 @@ if(!orbitControlsEnable){
                 break;
             case 32:
             //camera.position.y --;
+                break;
+            case 16:
+                vel = velRun;
+                break;
         }
     };
 
@@ -189,6 +193,9 @@ if(!orbitControlsEnable){
         }
         if (evt.keyCode == 68) {
             movimentRight = 0;
+        }
+        if (evt.keyCode == 16){
+            vel = velPlayer;
         }
     };
 
