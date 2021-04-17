@@ -33,9 +33,6 @@ var vel = velPlayer;
 function desenhar() {
     render.render(cena, camera);
     requestAnimationFrame(desenhar);
-
-       
-
     if(jumpscareEnable && colisionLoaded){
         PlayerHitbox.position.set(camera.position.x, camera.position.y, camera.position.z);  //necessário para sincronizar a hitbox do Player com a camera
         if(checkCollision(PlayerHitbox, MonsterHitbox)){
