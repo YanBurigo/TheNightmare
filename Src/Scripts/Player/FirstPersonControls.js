@@ -195,7 +195,7 @@ if (!orbitControlsEnable) {
         }
     }, 10);
 
-    var verifyIfShiftIsPressed = document.onkeypress = function (evt) {
+    document.onkeypress = function (evt) {
         if (evt.keyCode == 16)
             isRuning = true;
     }
@@ -204,19 +204,15 @@ if (!orbitControlsEnable) {
         if (start) {
             if (evt.keyCode == 87) {
                 movimentFront = 0;
-                verifyIfShiftIsPressed();
             }
             if (evt.keyCode == 83) {
                 movimentBack = 0;
-                verifyIfShiftIsPressed();
             }
             if (evt.keyCode == 65) {
                 movimentLeft = 0;
-                verifyIfShiftIsPressed();
             }
             if (evt.keyCode == 68) {
                 movimentRight = 0;
-                verifyIfShiftIsPressed();
             }
             if (evt.keyCode == 16) {
                 vel = velPlayer;
