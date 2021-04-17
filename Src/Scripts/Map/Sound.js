@@ -1,4 +1,5 @@
 const playerwalking = document.getElementById("playerwalking");
+const playerruning = document.getElementById("playerruning");
 
 const ambiencemain = document.getElementById("ambiencemain");
 const ambiencesecond = document.getElementById("ambiencesecond");
@@ -15,21 +16,23 @@ const keyMonster = document.getElementById("keyMonster");
 const jumpscareSound = document.getElementById("jumpscareSound");
 
 var win = setInterval(() => {
-    if ((camera.position.x >= -1.55 && camera.position.x <= 5) && (camera.position.z <= -57.5 && camera.position.z >= -58.0 && start)) {
+    if ((camera.position.x >= -1.55 && camera.position.x <= 5) && (camera.position.z <= -57.5 && camera.position.z >= -58.0 && start))
         winSound.play();
-    }
+
 }, 500);
 
 var nightmareWalking = setInterval(() => {
     arraySounds = ['nightmarewalking1', 'nightmarewalking2', 'nightmarewalking3', 'nightmarewalking4', 'nightmarewalking5'];
     var i = Math.floor(Math.random() * 4);
     var sortedSound = document.getElementById(arraySounds[i]);
-    if(startSound && startSound!=null && start){
+
+    if (startSound && startSound != null && start)
         sortedSound.play();
-    }
+
 }, 20000);
 var ambienceSound = setInterval(() => {
-    if(startSound && startSound!=null && start){
+
+    if (startSound && startSound != null && start)
         ambiencemain.play();
-    }
+
 }, 0);
