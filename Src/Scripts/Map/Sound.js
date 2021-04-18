@@ -13,12 +13,16 @@ const nightmarewalking4 = document.getElementById("nightmarewalking4");
 const nightmarewalking5 = document.getElementById("nightmarewalking5");
 const keyMonster = document.getElementById("keyMonster");
 
+const goldenJumpscare = document.getElementById("goldenJumpscareSound");
 const jumpscareSound = document.getElementById("jumpscareSound");
-
 var win = setInterval(() => {
-    if ((camera.position.x >= -1.55 && camera.position.x <= 5) && (camera.position.z <= -57.5 && camera.position.z >= -58.0 && start))
+    if ((camera.position.x >= -2 && camera.position.x <= 3) && camera.position.z <= -58.0 && start && victoryCont == 0){
         winSound.play();
-
+        var victory = document.getElementById("winScreen")
+        victory.innerHTML = '<div id="winScreen" style="text-align: center; position: fixed; color: green; width: 100%; height: 100%; padding-top: 30vh; font-size: 40px; font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; font-style: italic; background-color: rgba(22, 22, 22, 1);">Victory<br><br><p onclick="restart()">Play Again?</p></div>'
+        victoryCont ++;
+        document.exitPointerLock();
+    }
 }, 500);
 
 var nightmareWalking = setInterval(() => {
