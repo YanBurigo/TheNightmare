@@ -111,13 +111,7 @@ class LampLoader{
         gltflamp.scene.position.x = -6.5;
         gltflamp.scene.position.z = -60;
         cena.add(gltflamp.scene)
-        var luzPoste = new THREE.PointLight(0x888888);
-        luzPoste.intensity = 3
-        luzPoste.position.set(-6,1,-62);
-        luzPoste.castShadow = true;
-        cena.add(luzPoste);
       });
-
   }
 }
 
