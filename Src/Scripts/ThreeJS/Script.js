@@ -40,6 +40,10 @@ function desenhar() {
             jumpscareSound.play();
             jumpscare.innerHTML = '<img src="https://thumbs.gfycat.com/ForkedSnappyAsianelephant-size_restricted.gif" id="jumpscare" style="position:absolute; width:100%; height:100%"/>'
             jumpscareCont ++;
+            
+            var gameOverScreen = document.getElementById("GameOverScreen");
+            gameOverScreen.style.display = "block";
+            //testar colisão: camera.position.set(MonsterHitbox.position.x,MonsterHitbox.position.y,MonsterHitbox.position.z)         
         }
         else if(jumpscareCont > 0){
             var jumpscare = document.getElementById("jumpscare")
