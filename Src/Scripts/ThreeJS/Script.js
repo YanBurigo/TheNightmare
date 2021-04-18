@@ -46,11 +46,22 @@ function desenhar() {
             var jumpscare = document.getElementById("jumpscare")
             jumpscare.innerHTML = '<div id="jumpscare" />'
             jumpscareCont = 0;
-
         }
         if(monsterLoaded){
             if(checkCollision(PlayerHitbox, MonsterHitbox2)){
-                console.log("Colisão2");
+                ambiencesecond.play();
+                var random = getRandomInt(0, 1000);
+                if(random <= 1){
+                    var jumpscare = document.getElementById("jumpscare")
+                    jumpscareSound.play();
+                    jumpscare.innerHTML = '<img src="Assets/Images/Jumpscare/bonnieJumpscare.gif" id="jumpscare" style="position:absolute; width:100%; height:100%"/>'
+                    setTimeout(() => {
+                        jumpscare.innerHTML = '<div id="jumpscare" />'
+                    }, 2000);
+                }
+            }
+            else{
+                ambiencesecond.pause();
             }
         }
     }
