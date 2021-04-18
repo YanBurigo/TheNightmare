@@ -29,6 +29,7 @@ var monster;
 var chave;
 var pegouChave = false;
 var vel = velPlayer;
+var victoryCont = 0;
 
 function desenhar() {
     render.render(cena, camera);
@@ -38,7 +39,7 @@ function desenhar() {
         if(checkCollision(PlayerHitbox, MonsterHitbox)){
             var jumpscare = document.getElementById("jumpscare")
             jumpscareSound.play();
-            jumpscare.innerHTML = '<img src="https://thumbs.gfycat.com/ForkedSnappyAsianelephant-size_restricted.gif" id="jumpscare" style="position:absolute; width:100%; height:100%"/>'
+            jumpscare.innerHTML = '<img src="Assets/Images/Jumpscare/bonnieJumpscare.gif" id="jumpscare" style="position:absolute; width:100%; height:100%"/>'
             jumpscareCont ++;
         }
         else if(jumpscareCont > 0){
@@ -71,4 +72,8 @@ function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min)) + min;
+}
+
+function restart(){
+    document.location.reload(true);
 }
