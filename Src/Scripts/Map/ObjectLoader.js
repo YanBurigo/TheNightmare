@@ -32,7 +32,7 @@ class MonsterLoader{
   }
   _LoadModel() {
       const loader = new GLTFLoader();
-      loader.load('Src/Objects/External/Monster.gltf', (gltfMonster) => {
+      loader.load('Src/Objects/External/monster.gltf', (gltfMonster) => {
         gltfMonster.scene.traverse(c => {
           c.castShadow = true;
           c.receiveShadow = true;

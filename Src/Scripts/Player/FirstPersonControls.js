@@ -39,11 +39,11 @@ if (!orbitControlsEnable) {
         if((camera.position.z < -58 && (camera.position.x < - 8 || camera.position.x > 8)) || (camera.position.z > 58 && camera.position.x > -48) || camera.position.z > 66 || camera.position.z < -66 || camera.position.x < -58 || camera.position.x > 58){
             if(!golden){
                 golden = true
-                goldenJumpscare.play();
                 setTimeout(() => {
                     var jumpscareGolden = document.getElementById("jumpscare")
                     jumpscareGolden.innerHTML = '<img src="Assets/Images/Jumpscare/goldenJumpscare.gif" id="jumpscare" style="position:absolute; width:100%; height:100%"/>'
                 }, 400);
+                goldenJumpscare.play();
                 setTimeout(() => {
                     victoryCont ++;
                     document.exitPointerLock();

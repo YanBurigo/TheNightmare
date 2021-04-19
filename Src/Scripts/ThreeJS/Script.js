@@ -38,8 +38,8 @@ function desenhar() {
         PlayerHitbox.position.set(camera.position.x, camera.position.y, camera.position.z);  //necessário para sincronizar a hitbox do Player com a camera
         if(checkCollision(PlayerHitbox, MonsterHitbox)){
             var jumpscare = document.getElementById("jumpscare")
-            jumpscareSound.play();
             jumpscare.innerHTML = '<img src="Assets/Images/Jumpscare/bonnieJumpscare.gif" id="jumpscare" style="position:absolute; width:100%; height:100%"/>'
+            jumpscareSound.play();
             jumpscareCont ++;
         }
         else if(jumpscareCont > 0){
@@ -53,8 +53,8 @@ function desenhar() {
                 var random = getRandomInt(0, 1000);
                 if(random <= 1){
                     var jumpscare = document.getElementById("jumpscare")
-                    jumpscareSound.play();
                     jumpscare.innerHTML = '<img src="Assets/Images/Jumpscare/bonnieJumpscare.gif" id="jumpscare" style="position:absolute; width:100%; height:100%"/>'
+                    jumpscareSound.play();
                     setTimeout(() => {
                         jumpscare.innerHTML = '<div id="jumpscare" />'
                     }, 2000);
