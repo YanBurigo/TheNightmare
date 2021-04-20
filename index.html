@@ -14,6 +14,7 @@
 </head>
 
 <body id="element">
+    <audio id="menusound" src="Assets/Sounds/menusound.mp3"></audio>
     <audio id="playerwalking" src="Assets/Sounds/playerwalking.mp3"></audio>
     <audio id="playerruning" src="Assets/Sounds/playerruning.mp3"></audio>
     <audio id="ambiencemain" src="Assets/Sounds/ambiencemain.mp3"></audio>
@@ -30,7 +31,9 @@
     
     <script>
         var start = false;
+        menusound.play();
         function play(){
+            menusound.pause();
             var startScreen = document.getElementById("MainScreen");
             startScreen.remove(startScreen);
             start = true;
