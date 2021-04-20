@@ -41,9 +41,7 @@ function desenhar() {
             jumpscare.innerHTML = '<img src="https://thumbs.gfycat.com/ForkedSnappyAsianelephant-size_restricted.gif" id="jumpscare" style="position:absolute; width:100%; height:100%"/>'
             jumpscareCont ++;
             
-            var gameOverScreen = document.getElementById("GameOverScreen");
-            gameOverScreen.style.display = "block";
-            //testar colisão: camera.position.set(MonsterHitbox.position.x,MonsterHitbox.position.y,MonsterHitbox.position.z)         
+            setTimeout(mostrarGameOver,4000);
         }
         else if(jumpscareCont > 0){
             var jumpscare = document.getElementById("jumpscare")
@@ -75,4 +73,11 @@ function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min)) + min;
+}
+
+//p/ testar colisão no console: camera.position.set(MonsterHitbox.position.x,MonsterHitbox.position.y,MonsterHitbox.position.z)   
+function mostrarGameOver(){
+    camera.position.set(0,0,0)      //necessário para o jumpscare não ficar em loop
+    var gameOverScreen = document.getElementById("GameOverScreen");
+    gameOverScreen.style.display = "inline";
 }
