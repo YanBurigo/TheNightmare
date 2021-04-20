@@ -1,5 +1,6 @@
 const playerwalking = document.getElementById("playerwalking");
 const playerruning = document.getElementById("playerruning");
+const menusound = document.getElementById("menusound");
 
 const ambiencemain = document.getElementById("ambiencemain");
 const ambiencesecond = document.getElementById("ambiencesecond");
