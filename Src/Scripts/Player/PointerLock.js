@@ -30,7 +30,7 @@ if (!orbitControlsEnable) {
   }
 
   document.onmousedown = function (evt) {
-    if (start)
+    if (start && victoryCont != 1)
       canvas.requestPointerLock()
   }
 }

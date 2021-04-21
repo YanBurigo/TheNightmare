@@ -7,10 +7,11 @@ var frente = true;
 var lado2 = false;
 var frente2 = true;
 var isRuning = false;
+var golden = false;
 
 if (!orbitControlsEnable) {
     document.onkeydown = function (evt) {
-        if (start) {
+        if (start && victoryCont!=1) {
             switch (evt.keyCode) {
                 case 87: //w
                     movimentFront = 1;
@@ -31,7 +32,26 @@ if (!orbitControlsEnable) {
             }
         }
     };
-    var intervalo = setInterval(() => {
+    var intervaloMove = setInterval(() => {
+        if(victoryCont == 1){
+            clearInterval(intervaloMove);
+        }
+        if((camera.position.z < -58 && (camera.position.x < - 8 || camera.position.x > 8)) || (camera.position.z > 58 && camera.position.x > -48) || camera.position.z > 66 || camera.position.z < -66 || camera.position.x < -58 || camera.position.x > 58){
+            if(!golden){
+                golden = true
+                setTimeout(() => {
+                    var jumpscareGolden = document.getElementById("jumpscare")
+                    jumpscareGolden.innerHTML = '<img src="Assets/Images/Jumpscare/goldenJumpscare.gif" id="jumpscare" style="position:absolute; width:100%; height:100%"/>'
+                }, 400);
+                goldenJumpscare.play();
+                setTimeout(() => {
+                    victoryCont ++;
+                    document.exitPointerLock();
+                    alert("Dev: Don't leave the map!");
+                    restart();
+                }, 500);
+            }
+        }
         if (movimentFront == 1) {
             if (isRuning)
                 playerruning.play();
@@ -201,7 +221,7 @@ if (!orbitControlsEnable) {
     }
 
     document.onkeyup = function (evt) {
-        if (start) {
+        if (start && victoryCont != 1) {
             if (evt.keyCode == 87) {
                 movimentFront = 0;
             }
@@ -219,10 +239,17 @@ if (!orbitControlsEnable) {
                 isRuning = false;
             }
         }
+        else if(victoryCont == 1){
+            movimentFront = 0;
+            movimentBack = 0;
+            movimentLeft = 0;
+            movimentRight = 0;
+            isRuning = false;
+        }
     };
 
     document.onmousemove = function (evt) {
-        if (start) {
+        if (start && victoryCont != 1) {
             if (evt.movementX < 0)
                 camera.rotation.y -= (evt.movementX / 150);
 

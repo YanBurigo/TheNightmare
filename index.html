@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <link rel="shortcut icon" href="Assets/Images/Screen/bonnie.png" />
     <meta charset=utf-8>
     <title>The Nightmare</title>
     <style>
@@ -13,6 +14,7 @@
 </head>
 
 <body id="element">
+    <audio id="menusound" src="Assets/Sounds/menusound.mp3"></audio>
     <audio id="playerwalking" src="Assets/Sounds/playerwalking.mp3"></audio>
     <audio id="playerruning" src="Assets/Sounds/playerruning.mp3"></audio>
     <audio id="ambiencemain" src="Assets/Sounds/ambiencemain.mp3"></audio>
@@ -25,10 +27,13 @@
     <audio id="nightmarewalking5" src="Assets/Sounds/nightmarewalking5.mp3"></audio>
     <audio id="keyMonster" src="Assets/Sounds/keyMonster.mp3"></audio>
     <audio id="jumpscareSound" src="Assets/Sounds/jumpscareSound.mp3"></audio>
+    <audio id="goldenJumpscareSound" src="Assets/Sounds/goldenJumpscare.mp3"></audio>
     
     <script>
         var start = false;
+        menusound.play();
         function play(){
+            menusound.pause();
             var startScreen = document.getElementById("MainScreen");
             startScreen.remove(startScreen);
             start = true;
@@ -41,11 +46,12 @@
     </script>
 
     <div id="MainScreen">
+        <img style="position: fixed;" src="Assets/Images/Screen/capa.png" width="100%" height="100%">
         <div style="position: absolute; width: 100%; height: 100%; color: red; text-align: center; padding-top: 55vh; font-size: 40px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-            <p style="background-color: rgba(22, 22, 22, 0.6); padding-right: 5%;" onclick="play()">PLAY</p>
+            <p style="background-color: rgba(22, 22, 22, 0.6); padding-right: 5%; cursor: pointer;" onclick="play()">PLAY</p>
         </div>
-        <img src="Assets/Images/Screen/capa.png" width="100%" height="100%">
     </div>
+    <div id="winScreen"></div>
     
     <div id="GameOverScreen" style="display: none;">
         <img src="Assets/Images/Screen/GameOver.png" style="position: absolute;" width="100%" height="100%">

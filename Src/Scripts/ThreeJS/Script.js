@@ -29,6 +29,7 @@ var monster;
 var chave;
 var pegouChave = false;
 var vel = velPlayer;
+var victoryCont = 0;
 
 function desenhar() {
     render.render(cena, camera);
@@ -37,8 +38,8 @@ function desenhar() {
         PlayerHitbox.position.set(camera.position.x, camera.position.y, camera.position.z);  //necessário para sincronizar a hitbox do Player com a camera
         if(checkCollision(PlayerHitbox, MonsterHitbox)){
             var jumpscare = document.getElementById("jumpscare")
+            jumpscare.innerHTML = '<img src="Assets/Images/Jumpscare/bonnieJumpscare.gif" id="jumpscare" style="position:absolute; width:100%; height:100%"/>'
             jumpscareSound.play();
-            jumpscare.innerHTML = '<img src="https://thumbs.gfycat.com/ForkedSnappyAsianelephant-size_restricted.gif" id="jumpscare" style="position:absolute; width:100%; height:100%"/>'
             jumpscareCont ++;
             
             setTimeout(mostrarGameOver,4000);
@@ -47,11 +48,22 @@ function desenhar() {
             var jumpscare = document.getElementById("jumpscare")
             jumpscare.innerHTML = '<div id="jumpscare" />'
             jumpscareCont = 0;
-
         }
         if(monsterLoaded){
             if(checkCollision(PlayerHitbox, MonsterHitbox2)){
-                console.log("Colisão2");
+                ambiencesecond.play();
+                var random = getRandomInt(0, 1000);
+                if(random <= 1){
+                    var jumpscare = document.getElementById("jumpscare")
+                    jumpscare.innerHTML = '<img src="Assets/Images/Jumpscare/bonnieJumpscare.gif" id="jumpscare" style="position:absolute; width:100%; height:100%"/>'
+                    jumpscareSound.play();
+                    setTimeout(() => {
+                        jumpscare.innerHTML = '<div id="jumpscare" />'
+                    }, 2000);
+                }
+            }
+            else{
+                ambiencesecond.pause();
             }
         }
     }
@@ -75,9 +87,12 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 }
 
-//p/ testar colisão no console: camera.position.set(MonsterHitbox.position.x,MonsterHitbox.position.y,MonsterHitbox.position.z)   
 function mostrarGameOver(){
     camera.position.set(0,0,0)      //necessário para o jumpscare não ficar em loop
     var gameOverScreen = document.getElementById("GameOverScreen");
     gameOverScreen.style.display = "inline";
+}
+
+function restart(){
+    document.location.reload(true);
 }

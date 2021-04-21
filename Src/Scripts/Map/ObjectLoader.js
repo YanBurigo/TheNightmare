@@ -32,7 +32,7 @@ class MonsterLoader{
   }
   _LoadModel() {
       const loader = new GLTFLoader();
-      loader.load('Src/Objects/External/Monster.gltf', (gltfMonster) => {
+      loader.load('Src/Objects/External/monster.gltf', (gltfMonster) => {
         gltfMonster.scene.traverse(c => {
           c.castShadow = true;
           c.receiveShadow = true;
@@ -94,14 +94,37 @@ class MoonLoader{
 
   }
 }
+
+class LampLoader{
+  constructor() {
+      this._Initialize();
+  }
+  _Initialize() {
+  this._LoadModel();
+  }
+  _LoadModel() {
+      const loader = new GLTFLoader();
+      loader.load('Src/Objects/External/lamp.gltf', (gltflamp) => {
+        gltflamp.scene.traverse(c => {
+          c.castShadow = true;
+        });
+        gltflamp.scene.position.x = -6.5;
+        gltflamp.scene.position.z = -60;
+        cena.add(gltflamp.scene)
+      });
+  }
+}
+
 let _Chave = null;
 let _Monster = null;
 let _Pine = null;
 let _Moon = null;
+let _Lamp = null;
 
 window.addEventListener('DOMContentLoaded', () => {
     _Chave = new ObjectLoader();
     _Monster = new MonsterLoader();
     _Pine = new PineLoader();
     _Moon = new MoonLoader();
+    _Lamp = new LampLoader();
 });
