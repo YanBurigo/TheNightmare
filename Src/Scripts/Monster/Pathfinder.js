@@ -14,17 +14,19 @@ if(showMonsterInitialPosition){
     alert("X: " + MonsterHitbox.position.x + "\nZ: " + MonsterHitbox.position.z + "\nVérice: " + caminhoPercorrido[1].valor)
 }
 
-var movimentacaoMonster = setInterval(() => {
-    if(pegouChave && picketKey){
-        clearInterval(movimentacaoMonster);
-        velMonster = velMonsterAfterKey;
-        picketKey = false
-        setInterval(() => {
-            movimentMonster();
-        }, 1200 * velMonster);
-    }
-    movimentMonster();
-}, (1200 * velMonster));
+function startMonster(){
+    var movimentacaoMonster = setInterval(() => {
+        if(pegouChave && picketKey){
+            clearInterval(movimentacaoMonster);
+            velMonster = velMonsterAfterKey;
+            picketKey = false
+            setInterval(() => {
+                movimentMonster();
+            }, 1200 * velMonster);
+        }
+        movimentMonster();
+    }, (1200 * velMonster));
+}
 
 function movimentMonster(){
     valor = getRandomInt(0,caminhoPercorrido[1].prox.length);

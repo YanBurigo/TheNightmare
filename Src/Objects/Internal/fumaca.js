@@ -210,10 +210,14 @@ class ParticleSystem {
   }
 
   Step(timeElapsed) {
-    this._AddParticles(timeElapsed);
-    this._UpdateParticles(timeElapsed);
-    this._UpdateGeometry();
-    
+    if(smokeEnable){
+      this._AddParticles(timeElapsed);
+      this._UpdateParticles(timeElapsed);
+      this._UpdateGeometry();
+    }
+    else{
+      this._particles = [];
+    }
   }
 }
 
@@ -274,7 +278,10 @@ class ParticleSystemDemo {
 let _APP = null;
 
 window.addEventListener('DOMContentLoaded', () => {
-  if(smokeEnable){
-    _APP = new ParticleSystemDemo();
-  }
+  var loadFumace = setInterval(() => {
+    if(smokeEnable){
+      _APP = new ParticleSystemDemo();
+      clearInterval(loadFumace);
+    }
+  }, 2000);
 });
