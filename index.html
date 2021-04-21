@@ -39,6 +39,10 @@
             start = true;
             canvas.requestPointerLock()
         }
+
+        function restart(){
+            location.reload();
+        }
     </script>
 
     <div id="MainScreen">
@@ -49,6 +53,14 @@
     </div>
     <div id="winScreen"></div>
     
+    <div id="GameOverScreen" style="display: none;">
+        <img src="Assets/Images/Screen/GameOver.png" style="position: absolute;" width="100%" height="100%">
+        <div style= "position: absolute; width: 100%; height: 100%; color: red; text-align: center; padding-top: 55vh; font-size: 40px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+            <p style="background-color: rgba(22, 22, 22, 0.6); padding-right: 5%;" onclick="restart()">RESTART</p>
+        </div>
+    </div>
+
+
     <div id="jumpscare"></div>
     <script src="Src/Scripts/ThreeJS/Three.min.js"></script>
     <script src="Src/Scripts/Tools/Configs.js"></script>
