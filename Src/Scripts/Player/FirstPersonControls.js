@@ -251,10 +251,10 @@ if (!orbitControlsEnable) {
     document.onmousemove = function (evt) {
         if (start && victoryCont != 1) {
             if (evt.movementX < 0)
-                camera.rotation.y -= (evt.movementX / 150);
+                camera.rotation.y -= (evt.movementX / velMouse);
 
             else if (evt.movementX > 0)
-                camera.rotation.y -= (evt.movementX / 150);
+                camera.rotation.y -= (evt.movementX / velMouse);
         }
     }
 }
