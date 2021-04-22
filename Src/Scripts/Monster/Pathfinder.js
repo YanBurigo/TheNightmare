@@ -20,11 +20,15 @@ function startMonster(){
             clearInterval(movimentacaoMonster);
             velMonster = velMonsterAfterKey;
             picketKey = false
-            setInterval(() => {
-                movimentMonster();
-            }, 1200 * velMonster);
+            setTimeout(() => {
+                setInterval(() => {
+                        movimentMonster();
+                   }, 1200 * velMonster);
+            }, 2000);
         }
-        movimentMonster();
+        else{
+            movimentMonster();
+        }
     }, (1200 * velMonster));
 }
 

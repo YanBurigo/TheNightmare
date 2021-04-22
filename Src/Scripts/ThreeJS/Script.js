@@ -83,7 +83,7 @@ function getRandomInt(min, max) {
 }
 
 function mostrarGameOver(){
-    camera.position.set(0,0,0)
+    camera.position.set(-49.31,2,64)
     victoryCont = 1;
     var gameOverScreen = document.getElementById("GameOverScreen");
     gameOverScreen.style.display = "inline";
