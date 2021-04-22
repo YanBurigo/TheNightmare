@@ -34,6 +34,7 @@
     <script>
         var start = false;
         function play(){
+            preload();
             startMonster();
             menusound.pause();
             var startScreen = document.getElementById("MainScreen");
@@ -64,6 +65,7 @@
             var selectedGraphic;
             if(localStorage.getItem("selectedGraphic") == "null"){
                 localStorage.setItem("selectedGraphic", "true");
+                selectedGraphic = true;
             }
             if (localStorage.getItem("selectedGraphic") == "true") {
                 selectedGraphic = true;
@@ -73,7 +75,7 @@
             var graphics = document.getElementById("graphics");
             graphics.innerHTML = '<p id="graphics"></p>'
             var graphicsOption = document.getElementById("graphicsOption");
-            if(selectedGraphic){
+            if(selectedGraphic || selectedGraphic==null){
                 graphicsOption.innerHTML = '<div><p style="background-color: rgba(22, 22, 22, 0.6); padding-right: 5%; cursor: pointer;" onclick="low()">LOW</p><div><p style="background-color: rgba(22, 22, 22, 0.6); padding-right: 5%; cursor: pointer;" onclick="high()">⋙HIGH⋘</p><p style="background-color: rgba(22, 22, 22, 0.6); padding-right: 5%; cursor: pointer;" onclick="backGraphicScreen()">BACK</p>';
             }
             else{
@@ -86,7 +88,6 @@
             var play = document.getElementById("play").style.display = "block";
             var escolhas = document.getElementById("escolhas").style.display = "block";
             graphics.innerHTML = '<p id="graphics"></p>'
-            //restart();
         }
         function backGraphicScreen(){
             var graphicsOption = document.getElementById("graphicsOption");
@@ -120,19 +121,19 @@
         }
         function slow(){
             var sensibilityOption = document.getElementById("sensibilityOption");
-            sensibilityOption.innerHTML = '<div><p style="background-color: rgba(22, 22, 22, 0.6); padding-right: 5%; cursor: pointer;" onclick="slow()">⋘SLOW⋙</p><p style="background-color: rgba(22, 22, 22, 0.6); padding-right: 5%; cursor: pointer;" onclick="normal()">NORMAL</p><p style="background-color: rgba(22, 22, 22, 0.6); padding-right: 5%; cursor: pointer;" onclick="fast()">FAST</p><p style="background-color: rgba(22, 22, 22, 0.6); padding-right: 5%; cursor: pointer;" onclick="backSensibilityScreen()">BACK</p></div>'
+            sensibilityOption.innerHTML = '<div><p style="background-color: rgba(22, 22, 22, 0.6); padding-right: 5%; margin-top: -20px; cursor: pointer;" onclick="slow()">⋘SLOW⋙</p><p style="background-color: rgba(22, 22, 22, 0.6); padding-right: 5%; margin-top: -20px; cursor: pointer;" onclick="normal()">NORMAL</p><p style="background-color: rgba(22, 22, 22, 0.6); padding-right: 5%; margin-top: -20px; cursor: pointer;" onclick="fast()">FAST</p><p style="background-color: rgba(22, 22, 22, 0.6); padding-right: 5%; margin-top: -20px; cursor: pointer;" onclick="backSensibilityScreen()">BACK</p></div>'
             localStorage.setItem("selectedSensibility", 0);
             velMouse = 500;
         }
         function normal(){
             var sensibilityOption = document.getElementById("sensibilityOption");
-            sensibilityOption.innerHTML = '<div><p style="background-color: rgba(22, 22, 22, 0.6); padding-right: 5%; cursor: pointer;" onclick="slow()">SLOW</p><p style="background-color: rgba(22, 22, 22, 0.6); padding-right: 5%; cursor: pointer;" onclick="normal()">⋘NORMAL⋙</p><p style="background-color: rgba(22, 22, 22, 0.6); padding-right: 5%; cursor: pointer;" onclick="fast()">FAST</p><p style="background-color: rgba(22, 22, 22, 0.6); padding-right: 5%; cursor: pointer;" onclick="backSensibilityScreen()">BACK</p></div>'
+            sensibilityOption.innerHTML = '<div><p style="background-color: rgba(22, 22, 22, 0.6); padding-right: 5%; margin-top: -20px; cursor: pointer;" onclick="slow()">SLOW</p><p style="background-color: rgba(22, 22, 22, 0.6); padding-right: 5%; margin-top: -20px; cursor: pointer;" onclick="normal()">⋘NORMAL⋙</p><p style="background-color: rgba(22, 22, 22, 0.6); padding-right: 5%; margin-top: -20px; cursor: pointer;" onclick="fast()">FAST</p><p style="background-color: rgba(22, 22, 22, 0.6); padding-right: 5%; margin-top: -20px; cursor: pointer;" onclick="backSensibilityScreen()">BACK</p></div>'
             localStorage.setItem("selectedSensibility", 1);
             velMouse = 300;
         }
         function fast(){
             var sensibilityOption = document.getElementById("sensibilityOption");
-            sensibilityOption.innerHTML = '<div><p style="background-color: rgba(22, 22, 22, 0.6); padding-right: 5%; cursor: pointer;" onclick="slow()">SLOW</p><p style="background-color: rgba(22, 22, 22, 0.6); padding-right: 5%; cursor: pointer;" onclick="normal()">NORMAL</p><p style="background-color: rgba(22, 22, 22, 0.6); padding-right: 5%; cursor: pointer;" onclick="fast()">⋘FAST⋙</p><p style="background-color: rgba(22, 22, 22, 0.6); padding-right: 5%; cursor: pointer;" onclick="backSensibilityScreen()">BACK</p></div>'
+            sensibilityOption.innerHTML = '<div><p style="background-color: rgba(22, 22, 22, 0.6); padding-right: 5%; margin-top: -20px; cursor: pointer;" onclick="slow()">SLOW</p><p style="background-color: rgba(22, 22, 22, 0.6); padding-right: 5%; margin-top: -20px; cursor: pointer;" onclick="normal()">NORMAL</p><p style="background-color: rgba(22, 22, 22, 0.6); padding-right: 5%; margin-top: -20px; cursor: pointer;" onclick="fast()">⋘FAST⋙</p><p style="background-color: rgba(22, 22, 22, 0.6); padding-right: 5%; margin-top: -20px; cursor: pointer;" onclick="backSensibilityScreen()">BACK</p></div>'
             localStorage.setItem("selectedSensibility", 2);
             velMouse = 150;
         }
@@ -161,16 +162,14 @@
         </div>
     </div>
     <div id="winScreen"></div>
-    
+    <div id="jumpscare"></div>
     <div id="GameOverScreen" style="display: none;">
         <img src="Assets/Images/Screen/GameOver.png" style="position: absolute;" width="100%" height="100%">
         <div style= "position: absolute; width: 100%; height: 100%; color: red; text-align: center; padding-top: 55vh; font-size: 40px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-            <p style="background-color: rgba(22, 22, 22, 0.6); padding-right: 5%;" onclick="restart()">RESTART</p>
+            <p style="background-color: rgba(22, 22, 22, 0.6); padding-right: 5%; cursor: pointer;" onclick="restart()">RESTART</p>
         </div>
     </div>
 
-
-    <div id="jumpscare"></div>
     <script src="Src/Scripts/Player/OrbitControls.js"></script>
     <script src="Src/Scripts/Map/Sound.js"></script>
     <script src="Src/Scripts/ThreeJS/Script.js"></script>
@@ -194,7 +193,8 @@
     <script src="Src/Objects/Internal/end.js"></script>
 
     <script src="Src/Scripts/Map/ObjectLoader.js" type="module"></script>
-
+    <div id="preload"></div>
+    <script src="Src/Scripts/Monster/Preload.js"></script>
 </body>
 
 </html>

@@ -38,16 +38,11 @@ function desenhar() {
         PlayerHitbox.position.set(camera.position.x, camera.position.y, camera.position.z);  //necessário para sincronizar a hitbox do Player com a camera
         if(checkCollision(PlayerHitbox, MonsterHitbox)){
             var jumpscare = document.getElementById("jumpscare")
-            jumpscare.innerHTML = '<img src="Assets/Images/Jumpscare/bonnieJumpscare.gif" id="jumpscare" style="position:absolute; width:100%; height:100%"/>'
-            jumpscareSound.play();
-            jumpscareCont ++;
-            
-            setTimeout(mostrarGameOver,4000);
-        }
-        else if(jumpscareCont > 0){
-            var jumpscare = document.getElementById("jumpscare")
-            jumpscare.innerHTML = '<div id="jumpscare" />'
-            jumpscareCont = 0;
+            jumpscare.innerHTML = '<img src="Assets/Images/Jumpscare/bonnieJumpscare.webp" id="jumpscare" style="position:absolute; width:100%; height:100%"/>'
+            setTimeout(() => {
+                jumpscareSound.play();
+            }, 200);
+            setTimeout(mostrarGameOver,2000);
         }
         if(monsterLoaded){
             if(checkCollision(PlayerHitbox, MonsterHitbox2)){
@@ -55,11 +50,11 @@ function desenhar() {
                 var random = getRandomInt(0, 1000);
                 if(random <= 1){
                     var jumpscare = document.getElementById("jumpscare")
-                    jumpscare.innerHTML = '<img src="Assets/Images/Jumpscare/bonnieJumpscare.gif" id="jumpscare" style="position:absolute; width:100%; height:100%"/>'
-                    jumpscareSound.play();
+                    jumpscare.innerHTML = '<img src="Assets/Images/Jumpscare/bonnieJumpscare.webp" id="jumpscare" style="position:absolute; width:100%; height:100%"/>'
                     setTimeout(() => {
-                        jumpscare.innerHTML = '<div id="jumpscare" />'
-                    }, 2000);
+                        jumpscareSound.play();
+                    }, 200);
+                    setTimeout(mostrarGameOver,2000);
                 }
             }
             else{
@@ -88,11 +83,23 @@ function getRandomInt(min, max) {
 }
 
 function mostrarGameOver(){
-    camera.position.set(0,0,0)      //necessário para o jumpscare não ficar em loop
+    camera.position.set(0,0,0)
+    victoryCont = 1;
     var gameOverScreen = document.getElementById("GameOverScreen");
     gameOverScreen.style.display = "inline";
+    document.exitPointerLock();
 }
 
 function restart(){
     document.location.reload(true);
+}
+
+window.addEventListener('resize', () => {
+    OnWindowResize();
+}, false);
+
+function OnWindowResize() {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    render.setSize(window.innerWidth, window.innerHeight);
 }

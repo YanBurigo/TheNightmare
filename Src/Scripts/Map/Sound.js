@@ -21,7 +21,7 @@ var win = setInterval(() => {
         winSound.play();
         var victory = document.getElementById("winScreen")
         victory.innerHTML = '<div id="winScreen" style="text-align: center; position: fixed; color: green; width: 100%; height: 100%; padding-top: 30vh; font-size: 40px; font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; font-style: italic; background-color: rgba(22, 22, 22, 1);">Victory<br><br><p style="cursor: pointer;" onclick="restart()">Play Again?</p></div>'
-        victoryCont ++;
+        victoryCont = 1;
         document.exitPointerLock();
     }
 }, 500);

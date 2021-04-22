@@ -215,8 +215,9 @@ class ParticleSystem {
       this._UpdateParticles(timeElapsed);
       this._UpdateGeometry();
     }
-    else{
+    else if(this._particles.length != 0){
       this._particles = [];
+      this._UpdateGeometry();
     }
   }
 }
@@ -258,8 +259,9 @@ class ParticleSystemDemo {
       if (this._previousRAF === null) {
         this._previousRAF = t;
       }
-
-      this._RAF();
+      if(this._particles.length != 0){
+        this._RAF();
+      }
 
       render.render(cena, camera);
       this._Step(t - this._previousRAF);
@@ -269,8 +271,11 @@ class ParticleSystemDemo {
 
   _Step(timeElapsed) {
     const timeElapsedS = timeElapsed * 0.001;
-
+    if(smokeEnable)
     this._particles.Step(timeElapsedS);
+    else if(this._particles.length != 0){
+      this._particles.Step(timeElapsedS);
+    }
   }
 }
 

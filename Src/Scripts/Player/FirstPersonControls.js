@@ -41,7 +41,7 @@ if (!orbitControlsEnable) {
                 golden = true
                 setTimeout(() => {
                     var jumpscareGolden = document.getElementById("jumpscare")
-                    jumpscareGolden.innerHTML = '<img src="Assets/Images/Jumpscare/goldenJumpscare.gif" id="jumpscare" style="position:absolute; width:100%; height:100%"/>'
+                    jumpscareGolden.innerHTML = '<img src="Assets/Images/Jumpscare/goldenJumpscare.webp" id="jumpscare" style="position:absolute; width:100%; height:100%"/>'
                 }, 400);
                 goldenJumpscare.play();
                 setTimeout(() => {
